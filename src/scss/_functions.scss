@@ -1,0 +1,16 @@
+@use 'sass:math';
+
+/***
+    Equations found on article: https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/
+    Here, ($min-font, $max-font) = (y1, y2) and ($min-vw, $max-vw) = (x1, x2) 
+***/
+
+@function fluid_typography($min-font, $max-font, $min-vw, $max-vw){
+    $vw: math.div(calc(100 * ($max-font - $min-font)), calc($max-vw - $min-vw)) * 1vw;
+    $px: math.div(calc(($min-vw * $max-font) - ($max-vw * $min-font)), calc($min-vw - $max-vw));
+    $rem: math.div($px * 1px, 16px) * 1rem;
+    
+    $min: math.div($min-font * 1px, 16px) * 1rem;
+    $max: math.div($max-font * 1px, 16px) * 1rem;
+    @return clamp($min, $vw + $rem, $max);
+}

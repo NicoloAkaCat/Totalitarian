@@ -1,0 +1,11 @@
+#error-body {
+  min-height: 100svh;
+}
+#error-body img {
+  width: 30%;
+  height: 30%;
+  margin: 1.25rem;
+}
+#error-body p {
+  margin: 0.625rem;
+}

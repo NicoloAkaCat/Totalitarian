@@ -1,0 +1,228 @@
+@use "variables" as var;
+@use "mixins" as mix;
+@use "functions" as func;
+@use 'sass:color';
+
+@font-face {
+    font-family: 'Dictator Regular';
+    src: local('Dictator Regular'), 
+        url('../assets/fonts/dictator_regular.woff') format('woff'),
+        url('../assets/fonts/dictator_regular.woff2') format('woff2'),
+        url('../assets/fonts/dictator_regular.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1128px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}
+
+.text-large{
+    font-size: func.fluid_typography(30, 90, 576, 1200);
+}
+
+.text-medium{
+    font-size: func.fluid_typography(16, 25, 576, 992);
+}
+
+.text-small{
+    font-size: func.fluid_typography(14, 18, 576, 992);
+}
+
+.btn{
+    margin: 2rem;
+
+    button{
+        @include mix.button;
+    }
+}
+
+body{
+    background-color: var.$primary-clr;
+    color: var.$secondary-clr;
+}
+
+header{
+    width: 100%;
+    position: sticky;
+    background-color: var.$primary-clr-lighten;
+    border-bottom: 2px solid var.$shade-clr;
+
+    .logo{
+        padding: 1rem 0;
+        justify-content: space-between;
+        align-items: center;
+        &__img{
+            height: 3rem;
+            img{
+                height: 100%;
+                padding: 0.25rem 0;
+            }
+        }
+        &__title{
+            display: none;
+            position: absolute;
+        }
+        .menu{
+            &__hamburger,
+            &__hamburger::before,
+            &__hamburger::after{
+                transition: transform 0.2s ease;
+                height: 4px;
+                width: 30px;
+                background-color: var.$secondary-clr;
+                border-radius: 2px;
+            }
+    
+            &__hamburger::before,
+            &__hamburger::after{
+                display: block;
+                content: '';
+            }
+    
+            &__hamburger::before{
+                transform: translateY(-8px);
+            }
+    
+            &__hamburger::after{
+                transform: translateY(4px);
+            }
+
+            .hamburger--animation{
+                visibility: hidden;
+                &::before,
+                &::after{
+                    visibility: visible;
+                }
+                &::before{
+                    transform: translateY(0) rotate(45deg);
+                }
+                &::after{
+                    transform: translateY(-4px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+
+    .nav{
+        visibility: hidden;
+        display: none;
+    }
+
+    .nav--visible{
+        visibility: visible;
+        display: block;
+    }
+
+    .nav__list{
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem 0 ;
+        text-align: center;
+
+        .nav__item{
+            text-transform: uppercase;
+            margin: 0 auto;
+            width: 50%;
+
+            .nav__link,
+            .nav__link:visited{
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                @include mix.button;
+            }
+        }
+
+        .nav__item:not(:first-child){
+            margin: 1rem auto;
+        }
+    }
+
+}
+
+/*** 
+    small
+***/
+@media screen and (max-width: 576px){}
+
+@media screen and (min-width: 640px){
+    header{
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            gap: 0.5rem;
+            &__img{
+                display: block;
+            }
+            &__title{
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                padding-top: 3px;
+                font-family: 'Dictator Regular', system-ui, sans-serif;
+                color: var.$secondary-clr;
+            }
+            .menu{
+                display: none;
+                position: absolute;
+            }
+        }
+
+        .nav{
+            display: block;
+            visibility: visible;
+            &__list{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                .nav__item{
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+/*** 
+    medium 
+***/
+@media screen and (min-width: 768px){}
+/*** 
+    large
+***/
+@media screen and (min-width: 1440px){}
+
+@media screen and (min-width: 1200px){}
+
+@media screen and (min-width: 992px){}

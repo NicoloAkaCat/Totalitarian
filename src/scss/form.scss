@@ -1,0 +1,104 @@
+@use "variables" as var;
+@use "functions" as func;
+@use "mixins" as mix;
+@use 'sass:color';
+
+
+main{
+    min-height: 100svh;
+}
+
+.form-title{
+    text-shadow: -1px -1px 10px var.$shade-clr, 1px -1px 10px var.$shade-clr, -1px 1px 10px var.$shade-clr, 1px 1px 10px var.$shade-clr;
+    margin: .5rem 0;
+}
+
+.form-error{
+    width: 50%;
+    max-width: 400px;
+    background-color: rgba(lighten(var.$shade-clr, 2%), 0.6);
+    padding: 1em;
+    border-radius: 0.625rem;
+    border: 3px solid var.$shade-clr;
+    text-align: center;
+}
+
+.form{
+    @include mix.card;
+    max-width: 700px;
+    width: 75%;
+    padding: 1.25em;
+    margin: 0 auto;
+    text-align: center;
+
+    label{
+        display: block;
+    }
+
+    .form-err-msg{
+        margin-bottom: 0.4em;
+        color: var.$err-clr;
+    }
+
+    input{
+        background-color: lighten(var.$primary-clr, 65%);
+        color: var.$primary-clr;
+        max-width: 400px;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        border-radius: 0.625rem;
+        border: 2px solid transparent;
+        text-align: center;
+        &:focus-visible{
+            outline: none;
+            background-color: var.$secondary-clr;
+            border: 2px solid var.$shade-clr;
+            box-shadow: 0px 0px 4px 4px var.$shade-clr;
+        }
+        &::placeholder{
+            font-size: func.fluid_typography(14, 18, 576, 992);
+            text-align: center;
+            opacity: 0.4;
+        }
+    }
+
+    input:not([type="checkbox"]){
+        width: 70%;
+    }
+
+    input[type="checkbox"]{
+        display: block;
+        height: 2em;
+        width: 2em;
+        margin: 5px auto;
+        accent-color: var.$shade-clr;
+        &:hover{
+            cursor: pointer;
+            accent-color: var.$secondary-clr;
+        }
+    }
+
+    input[type="submit"]{
+        @include mix.button;
+        max-width: 200px;
+        margin-top: 1.7em;
+    }
+
+    .form-err-animation{
+        animation: err 0.2s linear;
+        margin-bottom: 0;
+        border: 2px solid var.$err-clr;
+    }
+}
+
+@keyframes err{
+    0%, 100%{
+        transform: translateX(0);
+    }
+    40%{
+        transform: translateX(20px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+}
