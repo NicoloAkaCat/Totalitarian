@@ -1,3 +1,4 @@
 .vscode/
 errors.log
 server_credentials
+.DS_Store

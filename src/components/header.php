@@ -17,6 +17,9 @@
 
         <nav class="nav">
             <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/Totalitarian/src/pages/shop.php" class="nav__link text-small"><i class="fa-solid fa-cart-shopping"></i>Shop</a>
+                </li>
                 <?php
                 if(VarUtils::checkIsSetInArray($_SESSION, "UID"))
                     echo '<li class="nav__item">
