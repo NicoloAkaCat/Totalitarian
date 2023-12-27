@@ -1,0 +1,30 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+.search{
+    max-width: 800px;
+    margin: 2rem auto;
+    &__form{
+        position: relative;
+        &__input{
+            flex: 1;
+            background-color: lighten(var.$primary-clr, 75%);
+            color: var.$primary-clr;
+            border: none;
+            padding: 1em;
+            border-radius: 1rem;
+            &:focus-visible{
+                background-color: var.$secondary-clr;
+                outline: 3px solid var.$shade-clr;
+                box-shadow: 0px 0px 7px 7px var.$shade-clr; 
+            }
+        }
+        &__btn{
+            position: absolute;
+            right: 0;
+            padding-right: 1em;
+            border: none;
+            background-color: transparent;
+        }
+    }
+}

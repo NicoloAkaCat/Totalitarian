@@ -1,0 +1,30 @@
+.search {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.search__form {
+  position: relative;
+}
+.search__form__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #efefef;
+  color: #303030;
+  border: none;
+  padding: 1em;
+  border-radius: 1rem;
+}
+.search__form__input:focus-visible {
+  background-color: #FAF8FF;
+  outline: 3px solid #431708;
+  -webkit-box-shadow: 0px 0px 7px 7px #431708;
+          box-shadow: 0px 0px 7px 7px #431708;
+}
+.search__form__btn {
+  position: absolute;
+  right: 0;
+  padding-right: 1em;
+  border: none;
+  background-color: transparent;
+}
