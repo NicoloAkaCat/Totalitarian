@@ -56,10 +56,7 @@ img{
 
 .btn{
     margin: 2rem;
-
-    button{
-        @include mix.button;
-    }
+    @include mix.button;
 }
 
 .page-title{

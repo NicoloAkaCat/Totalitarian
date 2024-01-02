@@ -85,7 +85,7 @@
                 include("login_form.php");
             }
         ?>
-        <a href="/Totalitarian/src/index.php" class="btn"><button class="text-small"><i class="fa-solid fa-house"></i>Home</button></a>
+        <a href="/Totalitarian/src/index.php" class="btn text-small"><i class="fa-solid fa-house"></i>Home</a>
     </main>
     <script src="/Totalitarian/src/scripts/loginForm.js" type="module"></script>
 </body>

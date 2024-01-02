@@ -63,8 +63,6 @@ img {
 
 .btn {
   margin: 2rem;
-}
-.btn button {
   padding: 0.5em 1em;
   border-radius: 0.625rem;
   border: 2px solid transparent;
@@ -72,23 +70,24 @@ img {
   color: #303030;
   cursor: pointer;
   text-transform: uppercase;
+  text-decoration: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.btn button i {
+.btn i {
   padding-right: 0.5rem;
   color: #303030;
 }
-.btn button:hover {
+.btn:hover {
   background-color: #431708;
   -webkit-box-shadow: 0px 0px 4px 1px #431708;
           box-shadow: 0px 0px 4px 1px #431708;
   color: #FAF8FF;
 }
-.btn button:hover i {
+.btn:hover i {
   color: #FAF8FF;
 }
-.btn button:focus-visible {
+.btn:focus-visible {
   outline: none;
   -webkit-box-shadow: 0px 0px 4px 4px #431708;
           box-shadow: 0px 0px 4px 4px #431708;
@@ -199,6 +198,7 @@ header .nav__list .nav__item .nav__link:visited {
   color: #303030;
   cursor: pointer;
   text-transform: uppercase;
+  text-decoration: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
