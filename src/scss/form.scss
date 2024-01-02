@@ -8,11 +8,6 @@ main{
     min-height: 100svh;
 }
 
-.form-title{
-    text-shadow: -1px -1px 10px var.$shade-clr, 1px -1px 10px var.$shade-clr, -1px 1px 10px var.$shade-clr, 1px 1px 10px var.$shade-clr;
-    margin: .5rem 0;
-}
-
 .form-error{
     width: 50%;
     max-width: 400px;

@@ -6,6 +6,10 @@
     margin: 2rem auto;
     &__form{
         position: relative;
+        label{
+            visibility: hidden;
+            position: absolute;
+        }
         &__input{
             flex: 1;
             background-color: lighten(var.$primary-clr, 75%);
@@ -25,6 +29,43 @@
             padding-right: 1em;
             border: none;
             background-color: transparent;
+            cursor: pointer;
+            visibility: hidden;
+            i{
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.products{
+    align-items: center;
+    gap: 2rem;
+    &__item{
+        gap: 0.7rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        @include mix.card;
+        &__img{
+            width: 60%;
+            @include mix.card;
+        }
+        &__price{
+            text-shadow: -1px -1px 10px var.$shade-clr, 1px -1px 10px var.$shade-clr, -1px 1px 10px var.$shade-clr, 1px 1px 10px var.$shade-clr;
+        }
+        &__btn{
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 750px){
+    .products{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__item{
+            flex-basis: 30%;
         }
     }
 }

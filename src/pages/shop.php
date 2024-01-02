@@ -2,6 +2,8 @@
     require_once(__DIR__."/../variable_utils.php");
     require_once(VarUtils::getDocumentRoot()."error/error_handler.php");
     require_once(VarUtils::getDocumentRoot()."session.php");
+    require_once(VarUtils::getDocumentRoot()."database/database.php");
+    require_once(VarUtils::getDocumentRoot()."database/product.php");
     
     ErrorHandler::init();
 	Session::startSession();
@@ -27,15 +29,40 @@
     ?>
     <main>
         <div class="container">
+            <h1 class="page-title text-large">SHOP</h1>
             <section class="search">
                 <form action="#" method="get" class="search__form row flex-center">
-                    <input type="text" name="search" class="search__form__input text-small" placeholder="Search">
-                    <button type="submit" class="search__form__btn text-small"><i class="fas fa-search"></i></button>
+                    <label for="search">search box</label>
+                    <input type="text" id="search" name="search" class="search__form__input text-small" placeholder="Search">
+                    <button type="submit" class="search__form__btn text-small">search button<i class="fas fa-search"></i></button>
                 </form>
             </section>
 
-            <section class="products">
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur facilis tempore similique non porro quae odio soluta? Officiis quibusdam earum aut nemo obcaecati omnis explicabo expedita. Voluptatem pariatur suscipit, a ducimus, inventore nostrum natus excepturi iste obcaecati, officiis accusantium molestias eum consequuntur eligendi quidem tempore dolorum quia! Fugit quo beatae magni minima cum excepturi illo ex modi sunt, laboriosam commodi in facere perspiciatis vel fugiat doloribus eum ea. Atque inventore deleniti repudiandae. Ipsam at, laudantium reprehenderit cumque et sit sint fugit possimus suscipit, itaque accusamus perspiciatis error corporis inventore perferendis quae, corrupti consequuntur! Aliquid, dolores at quidem qui deserunt non quas praesentium quos? Possimus inventore adipisci cum iusto fugiat debitis beatae sequi nesciunt sit natus atque ut, accusantium eos iure id esse distinctio eveniet repudiandae optio in deserunt porro. Consectetur qui ad minus ipsum vitae culpa, quos expedita consequuntur non porro. Iste provident assumenda qui illo eaque possimus unde quod velit deserunt. Molestias adipisci libero doloribus accusamus placeat! Distinctio alias possimus ipsum mollitia quia provident corrupti iste dicta odit impedit pariatur beatae praesentium sunt maxime, nam dolores nulla delectus dolorum, ea aspernatur. Maiores corrupti delectus veritatis tempore voluptate molestias itaque earum ea quas. Iusto nobis tenetur quis omnis voluptates laboriosam ea deserunt qui! Recusandae maxime molestiae culpa? Sit eaque quas tempore cupiditate consequatur dolorum labore quidem nisi maiores doloremque aliquam nulla nemo, impedit, eligendi nam sapiente officia iure eum nobis aut? Alias nam pariatur quisquam porro numquam similique sequi non a. Earum facere, repellat minima nemo pariatur, praesentium cum inventore ratione iusto ducimus laboriosam. Fugiat dignissimos explicabo iste, illo blanditiis atque, aut corporis qui reprehenderit tempora maiores harum error tenetur, non natus nulla voluptatum ipsa aliquid asperiores iusto. Maxime beatae inventore optio ea tempora nam nobis nemo sequi aut doloremque, ratione ipsum reiciendis natus numquam, aperiam dolorum. Consectetur saepe, error quas similique tempora possimus dolorem fugit sapiente recusandae quasi delectus facilis molestiae odit eveniet. Tempore suscipit dolore, beatae placeat iste officiis quas voluptatem vitae voluptatibus ratione id doloribus eos assumenda consectetur cumque. Aperiam sequi possimus iste ipsa delectus a hic qui, nihil incidunt laborum asperiores quidem nostrum id illum tempora sunt porro deserunt! Dolor dolorum recusandae saepe tenetur iure animi repudiandae, eum aspernatur soluta voluptates quia consequatur nostrum minus, modi sint obcaecati! Itaque, laboriosam totam! Libero sequi corporis doloremque, inventore tempora amet, soluta quam iste voluptatum deserunt voluptas eos totam odit! Non, molestiae? Eius, sequi! Odit perspiciatis amet, suscipit laudantium fugiat asperiores. Accusantium repellendus explicabo, atque autem consectetur corrupti exercitationem perferendis, similique soluta odio debitis maxime aspernatur ipsum velit esse quidem! A ad quam sapiente sed eos voluptatem veniam iure, laboriosam dolore. Totam numquam inventore quam, qui commodi debitis quasi nulla, dignissimos eius suscipit similique quia rerum facilis soluta odit molestiae corporis voluptatem esse cupiditate. Non eos corrupti accusantium laboriosam, unde incidunt quos veritatis autem aperiam libero. Repellendus dolore fugiat aliquid fuga voluptate deleniti quam harum beatae soluta, modi omnis ipsa distinctio quidem vitae? Odit dolore quidem aspernatur minima ad praesentium, dolorem consectetur, dolorum vero laboriosam, rem debitis voluptate maiores dignissimos impedit autem. Ipsa sunt ullam rerum consequuntur delectus, voluptate autem iure dolor assumenda dolorum, nihil impedit enim adipisci ratione inventore! Voluptatibus, impedit! Dignissimos, molestiae non fuga minima possimus cum nulla modi eveniet quo neque praesentium rem vel error a aspernatur officiis! Animi corrupti fugit, quos tempora facilis nobis aperiam quis eveniet assumenda illum quo fugiat dignissimos unde. Hic, ab dolor tempora sunt suscipit quo delectus ex nemo, aut mollitia odit aliquid cumque dolore iusto exercitationem! Pariatur labore nisi officia nam modi ullam iusto beatae iure natus assumenda blanditiis eum eos ab enim aperiam, vel similique molestias fuga, velit, voluptate asperiores deserunt sed necessitatibus! Dolore beatae nobis magni sit amet dolorum iste in error incidunt quod doloribus, possimus tenetur ducimus voluptate! Nemo, numquam reprehenderit! Omnis accusamus sequi recusandae eum quasi nihil inventore earum repudiandae dolor incidunt distinctio ea fugit placeat ipsam, modi exercitationem temporibus fugiat molestiae soluta! Sequi delectus aperiam voluptas quibusdam eaque non dolore eum, nesciunt veritatis rerum adipisci neque et odio numquam, animi repellendus explicabo quo ullam eos quasi facilis modi! Ullam hic temporibus minima ea beatae, expedita in aut, eius sapiente odio quidem fugit dolores. Repudiandae voluptatibus dicta tempore rem unde minus. Voluptates rerum voluptatum cupiditate molestias modi dolorem fuga alias reprehenderit iste consequatur recusandae assumenda exercitationem, quaerat praesentium reiciendis velit eius id molestiae! Sit porro beatae nulla veniam odit voluptatibus, quaerat repellat magni omnis minus soluta est vitae sunt pariatur voluptate ullam laudantium quibusdam libero. Velit ab facere unde fugiat nemo vel id porro possimus sunt iste exercitationem error, harum expedita, saepe qui minima quia illum? Obcaecati repudiandae consequatur, et assumenda minima provident dolores deleniti voluptates delectus sit veniam amet sequi cum corrupti asperiores blanditiis odio ea quas ipsa rem quia. Deserunt totam fuga eos provident assumenda molestias? Quas praesentium, tenetur repellat, blanditiis quasi saepe dolorem labore aspernatur laborum dolores expedita ex eos culpa quaerat unde! Repellat esse laudantium animi aut, impedit dicta maxime error quisquam, sapiente tempora at voluptas ipsam similique laborum. Culpa earum veniam vitae amet vel quae esse, ex veritatis tempora labore voluptatibus voluptas cum unde obcaecati, quis magnam facilis eius optio quidem pariatur velit ipsam. Dignissimos placeat culpa porro unde recusandae atque esse quibusdam, aspernatur dolore? Saepe sequi sunt alias eligendi ab commodi, labore magnam, dolores modi iste, harum accusamus cupiditate quam. Laudantium, iusto natus? Voluptate rerum, illum tempora, mollitia esse amet cupiditate architecto maiores reiciendis error sapiente? Molestias sint dolorum esse veniam excepturi dignissimos numquam itaque sapiente eum, commodi, soluta voluptates. Perferendis, ab animi. Possimus mollitia numquam ullam voluptatem voluptates saepe sed in. Culpa illum nostrum architecto modi aut consequuntur nihil odio eius, ipsam officia dolore molestias voluptatem quam ea numquam necessitatibus quae officiis. Assumenda, ipsum quo. Iure nam vel vitae sapiente sequi totam quibusdam eveniet, iste expedita asperiores ratione excepturi saepe deleniti? Reprehenderit harum debitis vel impedit, quae neque! Incidunt modi distinctio voluptas cupiditate omnis. Itaque eius tempore beatae officia commodi ea veniam voluptatum possimus obcaecati reiciendis natus animi molestias, ipsam, labore non corporis praesentium eos nemo mollitia assumenda rem.</div>
+            <section class="products column">
+                <?php
+                $db = new Database();
+                $db->connect();
+                if(VarUtils::checkIsSetInArray($_GET, "search") && !VarUtils::checkIsEmptyInArray($_GET, "search")){
+                    $search = $_GET["search"];
+                    $query = $db->prepare("SELECT * FROM products WHERE name LIKE ?");
+                    $db->bindParam($query, 's', $search);
+                }
+                else
+                    $query = $db->prepare("SELECT * FROM products");
+                $db->execute($query);
+                $result = $db->getResult($query);
+                $query->close();
+                $db->close();
+
+                while($product = Product::withRow($result->fetch_assoc())){
+                    echo '<article class="products__item column flex-center">
+                            <img class="products__item__img" src="'.$product->getImage().'" alt="'.$product->getImageAlt().'">
+                            <h3 class="products__item__name text-medium">'.$product->getName().'</h3>
+                            <span class="products__item__price text-medium">'.$product->getPrice().' €</span>
+                            <a href="/Totalitarian/src/pages/view_product.php?id='.$product->getId().'" class="products__item__btn btn"><button class="text-small">View product</button></a>
+                        </article>';
+                }
+                ?>
             </section>
         </div>
     </main>

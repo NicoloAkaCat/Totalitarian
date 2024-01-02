@@ -1,4 +1,4 @@
-<h1 class="form-title text-large">REGISTER</h1>
+<h1 class="page-title text-large">REGISTER</h1>
 <form action="register.php" method="post" class="form text-small" id="register-form" novalidate>
     <label for="firstname">First Name</label>
     <input type="text" class="text-small" id="firstname" name="firstname" placeholder="The">
