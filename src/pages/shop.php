@@ -34,7 +34,7 @@
                 <form action="#" method="get" class="search__form row flex-center">
                     <label for="search">search box</label>
                     <input type="text" id="search" name="search" class="search__form__input text-small" placeholder="Search">
-                    <button type="submit" class="search__form__btn text-small">search button<i class="fas fa-search"></i></button>
+                    <button type="submit" class="search__form__btn text-small">search button<i class="fa-solid fa-search"></i></button>
                 </form>
             </section>
 
@@ -57,8 +57,8 @@
                 while($product = Product::withRow($result->fetch_assoc())){
                     echo '<article class="products__item column flex-center">
                             <img class="products__item__img" src="'.$product->getImage().'" alt="'.$product->getImageAlt().'">
-                            <h3 class="products__item__name text-medium">'.$product->getName().'</h3>
-                            <span class="products__item__price text-medium">'.$product->getPrice().' €</span>
+                            <h2 class="products__item__name text-medium">'.$product->getName().'</h2>
+                            <span class="products__item__price text-medium">'.$product->getPrice().' $</span>
                             <a href="/Totalitarian/src/pages/view_product.php?id='.$product->getId().'" class="products__item__btn btn text-small">View product</a>
                         </article>';
                 }

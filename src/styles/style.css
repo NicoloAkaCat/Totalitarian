@@ -190,7 +190,6 @@ header .nav__list .nav__item .nav__link,
 header .nav__list .nav__item .nav__link:visited {
   display: block;
   width: 100%;
-  text-decoration: none;
   padding: 0.5em 1em;
   border-radius: 0.625rem;
   border: 2px solid transparent;
@@ -277,6 +276,46 @@ header .nav__list .nav__item:not(:first-child) {
   }
   header .nav__list .nav__item {
     width: auto;
+  }
+  header .nav__list .nav__item .nav__link i {
+    padding: 0;
+  }
+  header .nav__list .nav__item .nav__link span {
+    display: none;
+  }
+  header .nav__list .nav__item .nav__link:hover i {
+    padding-right: 0.5rem;
+  }
+  header .nav__list .nav__item .nav__link:hover span {
+    display: inline-block;
+  }
+  header .nav__list .nav__item .nav__link:hover i, header .nav__list .nav__item .nav__link:hover span {
+    -webkit-animation: slideIn 0.2s linear;
+            animation: slideIn 0.2s linear;
+  }
+  @-webkit-keyframes slideIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
   }
 }
 /*** 
