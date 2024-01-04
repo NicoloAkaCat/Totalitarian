@@ -54,7 +54,7 @@ img {
 }
 
 .text-medium {
-  font-size: clamp(1rem, 2.1634615385vw + 0.2211538462rem, 1.5625rem);
+  font-size: clamp(1.25rem, 2.4038461538vw + 0.3846153846rem, 1.875rem);
 }
 
 .text-small {

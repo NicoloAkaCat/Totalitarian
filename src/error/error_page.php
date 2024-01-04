@@ -18,7 +18,7 @@
     <title>Error</title>
 </head>
 <body class="container column flex-center" id="error-body">
-    <img src="/Totalitarian/src/assets/logo_icon_white.svg" alt="logo">
+    <img src="/Totalitarian/src/assets/logo_icon_white.svg" alt="Totalitarian Logo">
     <h1 class="text-small">Oops! Something went wrong</h1>
     <p class="text-small">
     <?php 
@@ -27,6 +27,6 @@
         Session::unsetSessionVar("errorCode");
     ?>
     </p>
-    <a href="/Totalitarian/src/index.php"><button class="btn text-small">Home</button></a>
+    <a href="/Totalitarian/src/index.php" class="btn text-small">Home</a>
 </body>
 </html>

@@ -43,6 +43,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 .products__item {
   gap: 0.7rem;
