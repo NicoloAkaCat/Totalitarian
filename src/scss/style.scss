@@ -71,6 +71,7 @@ img{
     left: auto;
     right: auto;
     width: 50%;
+    max-width: 500px;
     padding: 1rem;
     text-align: center;
     border-radius: 0.625rem;
@@ -105,6 +106,10 @@ img{
     background-color: var.$failure-clr;
     border: 2px solid var.$failure-clr-lighten;
     color: var.$secondary-clr;
+}
+
+.no-animate{
+    animation: none;
 }
 
 body{

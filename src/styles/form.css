@@ -6,16 +6,6 @@ main {
   min-height: 100svh;
 }
 
-.form-error {
-  width: 50%;
-  max-width: 400px;
-  background-color: rgba(76, 26, 9, 0.6);
-  padding: 1em;
-  border-radius: 0.625rem;
-  border: 3px solid #431708;
-  text-align: center;
-}
-
 .form {
   background-color: #3a3a3a;
   color: #FAF8FF;
@@ -30,10 +20,6 @@ main {
 }
 .form label {
   display: block;
-}
-.form .form-err-msg {
-  margin-bottom: 0.4em;
-  color: #d70019;
 }
 .form input {
   background-color: #d6d6d6;
@@ -123,6 +109,10 @@ main {
   -webkit-box-shadow: 0px 0px 4px 4px #431708;
           box-shadow: 0px 0px 4px 4px #431708;
   border: 2px solid #431708;
+}
+.form .form-err-msg {
+  margin-bottom: 0.4em;
+  color: #d70019;
 }
 .form .form-err-animation {
   -webkit-animation: err 0.2s linear;

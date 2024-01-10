@@ -8,16 +8,6 @@ main{
     min-height: 100svh;
 }
 
-.form-error{
-    width: 50%;
-    max-width: 400px;
-    background-color: rgba(lighten(var.$shade-clr, 2%), 0.6);
-    padding: 1em;
-    border-radius: 0.625rem;
-    border: 3px solid var.$shade-clr;
-    text-align: center;
-}
-
 .form{
     @include mix.card;
     max-width: 700px;
@@ -28,11 +18,6 @@ main{
 
     label{
         display: block;
-    }
-
-    .form-err-msg{
-        margin-bottom: 0.4em;
-        color: var.$err-clr;
     }
 
     input{
@@ -77,6 +62,11 @@ main{
         @include mix.button;
         max-width: 200px;
         margin-top: 1.7em;
+    }
+    
+    .form-err-msg{
+        margin-bottom: 0.4em;
+        color: var.$err-clr;
     }
 
     .form-err-animation{
