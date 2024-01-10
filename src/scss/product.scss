@@ -1,6 +1,10 @@
 @use 'mixins' as mix;
 @use 'variables' as var;
 
+#main-container{
+    position: relative;
+}
+
 .product{
     @include mix.card;
     padding: 1rem;
