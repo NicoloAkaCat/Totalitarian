@@ -12,9 +12,11 @@
             Session::checkRememberCookie($_COOKIE["UID"]);
     }
 
+    if(VarUtils::checkIsSetInArray($_GET, "js") && $_GET["js"] == "false")
+        ErrorHandler::displayError("Please enable JavaScript", 400);
     if(!VarUtils::checkIsSetInArray($_GET, "id") || VarUtils::checkIsEmptyInArray($_GET, "id"))
         ErrorHandler::displayError("Server Error", 500);
-
+    
     $db = new Database();
     $db->connect();
     $query = $db->prepare("SELECT * FROM products WHERE id = ?");
@@ -45,7 +47,7 @@
         include(VarUtils::getDocumentRoot()."components/header.php");
     ?>
     <main>
-        <div class="container column flex-center">
+        <div class="container column flex-center" id="main-container">
             <div class="product column flex-center">
                 <img src="<?php echo $product->getImage();?>" alt="<?php echo $product->getImageAlt();?>" class="product__image">
                 <div class="product__info">
@@ -74,13 +76,15 @@
                     <p class="product__info__stock text-small">In Stock: <?php echo $product->getQuantity();?></p>
                     <div class="product__info__buy">
                         <div class="product__info__buy__price text-medium"><?php echo $product->getPrice();?> $</div>
-                        <a href="#" class="product__info__buy__btn btn text-medium">Add to Cart</a>
+                        <a href="./view_product.php?js=false" class="product__info__buy__btn btn text-medium">Add to Cart</a>
                     </div>
                 </div>
             </div>
 
             <a href="/Totalitarian/src/pages/shop.php" class="back-button btn"><span>&#x25c0;</span>Back to Shop</a>
         </div>
+    </main>
     <script src="/Totalitarian/src/scripts/main.js"></script>
+    <script src="/Totalitarian/src/scripts/addToCart.js" type="module"></script>
 </body>
 </html>
