@@ -8,4 +8,5 @@
 }
 #error-body p {
   margin: 0.625rem;
+  text-align: center;
 }

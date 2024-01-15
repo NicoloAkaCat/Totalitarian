@@ -1,0 +1,16 @@
+.empty-cart {
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.empty-cart__img {
+  width: 50%;
+}
+.empty-cart__msg {
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .empty-cart__img {
+    width: 25%;
+  }
+}

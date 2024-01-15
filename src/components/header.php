@@ -20,6 +20,9 @@
                 <li class="nav__item">
                     <a href="/Totalitarian/src/pages/shop.php" class="nav__link text-small"><i class="fa-solid fa-bag-shopping"></i><span>Shop</span></a>
                 </li>
+                <li class="nav__item">
+                    <a href="/Totalitarian/src/pages/cart.php" class="nav__link text-small"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+                </li>
                 <?php
                 if(VarUtils::checkIsSetInArray($_SESSION, "UID"))
                     echo '<li class="nav__item">
