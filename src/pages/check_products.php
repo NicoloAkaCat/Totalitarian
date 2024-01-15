@@ -3,14 +3,10 @@
     require_once(VarUtils::getDocumentRoot()."database/database.php");
 	require_once(VarUtils::getDocumentRoot()."error/error_handler.php");
     ErrorHandler::init();
-
-    function fail(){
-        echo json_encode(array("status" => "error"));
-        exit(1);
-    }
+    Session::startSession();
 
     if(!$JSON = file_get_contents("php://input"))
-        fail();
+        ErrorHandler::displayJsonError("Internal Error", 500);
 
     $productIds = json_decode($JSON);
     $db = new Database();
@@ -21,14 +17,14 @@
         if($productId == 0){
             $query->close();
             $db->close();
-            fail();
+            ErrorHandler::displayJsonError("Internal Error", 500);
         }
         $db->bindParam($query, 'i', $productId);
         $db->execute($query);
         if($db->getResult($query)->num_rows != 1){
             $query->close();
             $db->close();
-            fail();
+            ErrorHandler::displayJsonError("Try cleaning your localstorage", 409);
         }
     }
     $query->close();

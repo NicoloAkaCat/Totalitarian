@@ -33,5 +33,12 @@
             header("Location: /Totalitarian/src/error/error_page.php");
             exit(1);
         }
+
+        public static function displayJsonError(string $msg, int $code): void{
+            Session::setSessionVar("errorMessage", $msg);
+            Session::setSessionVar("errorCode", $code);
+            echo json_encode(array("status" => "error"));
+            exit(1);
+        }
     }
 ?>

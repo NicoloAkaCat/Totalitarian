@@ -3,14 +3,10 @@
     require_once(VarUtils::getDocumentRoot()."database/database.php");
 	require_once(VarUtils::getDocumentRoot()."error/error_handler.php");
     ErrorHandler::init();
-    
-    function fail(){
-        echo json_encode(array("status" => "error"));
-        exit(1);
-    }
+    Session::startSession();
 
     if (!VarUtils::checkIsSetInArray($_GET, "email"))
-        fail();
+        ErrorHandler::displayJsonError("Internal Error", 500);
 
     $email = $_GET["email"];
     $db = new Database();

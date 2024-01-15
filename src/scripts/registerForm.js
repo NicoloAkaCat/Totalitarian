@@ -16,7 +16,7 @@ email.addEventListener('change', () => {
     .then((response) => response.json())
     .then((json) => {
         if(json['status'] === 'error'){
-            window.location.replace('/Totalitarian/src/error/error_page_js.php')
+            window.location.replace('/Totalitarian/src/error/error_page.php')
         }
         if(json['exists'] === true)
             showFormError(email, 'Email already in use');
