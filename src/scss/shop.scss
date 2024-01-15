@@ -39,7 +39,7 @@
 }
 
 .products{
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
     margin-bottom: 2rem;
     &__item{
@@ -50,6 +50,7 @@
         &__img{
             width: 60%;
             @include mix.card;
+            box-shadow: 0px 0px 8px 8px var.$primary-clr;
         }
         &__price{
             text-shadow: -1px -1px 10px var.$shade-clr, 1px -1px 10px var.$shade-clr, -1px 1px 10px var.$shade-clr, 1px 1px 10px var.$shade-clr;

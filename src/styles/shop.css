@@ -39,9 +39,9 @@
 }
 
 .products {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -62,6 +62,8 @@
   -webkit-box-shadow: 0px 0px 2px 2px #431708;
           box-shadow: 0px 0px 2px 2px #431708;
   border-radius: 0.625rem;
+  -webkit-box-shadow: 0px 0px 8px 8px #303030;
+          box-shadow: 0px 0px 8px 8px #303030;
 }
 .products__item__price {
   text-shadow: -1px -1px 10px #431708, 1px -1px 10px #431708, -1px 1px 10px #431708, 1px 1px 10px #431708;
