@@ -27,10 +27,12 @@
     ?>
     <main class="container">
         <h1 class="page-title text-large">CART</h1>
+
         <section class="empty-cart column flex-center">
             <img src="/Totalitarian/src/assets/logo_icon_white.svg" alt="Totalitarian logo" class="empty-cart__img">
-            <h2 class="empty-cart__msg text-medium">WHY IS YOUR CART EMPTY??</h2>
+            <h2 class="empty-cart__msg text-medium">Please enable JavaScript</h2>
         </section>
+
         <section class="product-list"></section>
     </main>
     <script src="/Totalitarian/src/scripts/main.js"></script>
