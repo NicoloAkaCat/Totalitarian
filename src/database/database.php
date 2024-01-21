@@ -82,5 +82,30 @@
         public function close(): void{
             $this->db->close(); //since php 8.0.0 always returns true
         }
+
+        public function beginTransaction(): void{
+            if(!$this->db->begin_transaction())
+                ErrorHandler::displayError("", 500);
+        }
+
+        public function commit(): void{
+            try{
+                $this->db->commit();
+            }
+            catch(mysqli_sql_exception $e){
+                ErrorHandler::logMysqlEx("commit", $e);
+                ErrorHandler::displayError("", 500);
+            }    
+        }
+
+        public function rollback(): void{
+            try{
+                $this->db->rollback();
+            }
+            catch(mysqli_sql_exception $e){
+                ErrorHandler::logMysqlEx("rollback", $e);
+                ErrorHandler::displayError("", 500);
+            }    
+        }
     }
 ?>
