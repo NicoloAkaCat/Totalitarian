@@ -61,7 +61,10 @@
         if(VarUtils::checkIsSetInArray($_POST, "remember"))
             Session::setRememberCookie($inputEmail);
 
-        header("Location: /Totalitarian/src/index.php");
+        if(VarUtils::checkIsSetInArray($_SESSION, "redirect"))
+            header("Location: ".Session::getSessionVar("redirect"));
+        else
+            header("Location: /Totalitarian/src/index.php");
         exit(0);
     }
 ?>

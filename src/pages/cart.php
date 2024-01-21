@@ -9,6 +9,9 @@
         if(VarUtils::checkIsSetInArray($_COOKIE, "UID"))
             Session::checkRememberCookie($_COOKIE["UID"]);
     }
+
+    if(VarUtils::checkIsSetInArray($_GET, "js") && $_GET["js"] == "false")
+        ErrorHandler::displayError("Please enable JavaScript", 400);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,15 +28,15 @@
     <?php
         include(VarUtils::getDocumentRoot()."components/header.php");
     ?>
-    <main class="container">
+    <main class="container column flex-center">
         <h1 class="page-title text-large">CART</h1>
 
         <section class="empty-cart column flex-center">
             <img src="/Totalitarian/src/assets/logo_icon_white.svg" alt="Totalitarian logo" class="empty-cart__img">
-            <h2 class="empty-cart__msg text-medium">Please enable JavaScript</h2>
+            <h2 class="empty-cart__msg text-medium">Please enable JavaScript</h2> <!-- JS will replace this -->
         </section>
 
-        <section class="product-list"></section>
+        <section class="product-list"></section> <!-- populated by JS -->
     </main>
     <script src="/Totalitarian/src/scripts/main.js"></script>
     <script src="/Totalitarian/src/scripts/cart.js"></script>
