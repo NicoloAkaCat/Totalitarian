@@ -6,7 +6,7 @@
     Session::startSession();
 
     if(!VarUtils::checkIsSetInArray($_SESSION, "UID")){
-        Session::setSessionVar("redirect", "/Totalitarian/src/pages/cart.php");
+        Session::setSessionVar("redirect", "/Totalitarian/src/shop/cart.php");
         echo json_encode(array("status" => "redirect"));
         exit(1);
     }

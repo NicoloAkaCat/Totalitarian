@@ -46,7 +46,7 @@ if(cart != null){
             productIds.forEach(id => {
                 quantities[id] = document.querySelector(`#value${id}`).textContent;
             });
-            fetch('/Totalitarian/src/pages/checkout.php', {
+            fetch('/Totalitarian/src/shop/checkout.php', {
                 method: 'POST',
                 body: JSON.stringify({
                     productIds: productIds,
@@ -88,7 +88,7 @@ function buildProduct(products, product) {
 }
 
 function checkProducts(productIds){
-    return fetch('/Totalitarian/src/pages/check_products.php', {
+    return fetch('/Totalitarian/src/shop/check_products.php', {
         method: 'POST',
         body: JSON.stringify(productIds),
         headers: {

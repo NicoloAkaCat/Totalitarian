@@ -81,7 +81,7 @@
                 </div>
             </div>
 
-            <a href="/Totalitarian/src/pages/shop.php" class="back-button btn"><span>&#x25c0;</span>Back to Shop</a>
+            <a href="/Totalitarian/src/shop/shop.php" class="back-button btn"><span>&#x25c0;</span>Back to Shop</a>
         </div>
     </main>
     <script src="/Totalitarian/src/scripts/main.js"></script>

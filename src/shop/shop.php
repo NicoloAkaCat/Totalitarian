@@ -59,7 +59,7 @@
                             <img class="products__item__img" src="'.$product->getImage().'" alt="'.$product->getImageAlt().'">
                             <h2 class="products__item__name text-medium">'.$product->getName().'</h2>
                             <span class="products__item__price text-medium">'.$product->getPrice().' $</span>
-                            <a href="/Totalitarian/src/pages/view_product.php?id='.$product->getId().'" class="products__item__btn btn text-small">View product</a>
+                            <a href="/Totalitarian/src/shop/view_product.php?id='.$product->getId().'" class="products__item__btn btn text-small">View product</a>
                         </article>';
                 }
                 ?>
