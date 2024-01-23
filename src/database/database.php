@@ -107,5 +107,12 @@
                 ErrorHandler::displayError("", 500);
             }    
         }
+
+        public function getInsertId(): int|string{
+            $id = $this->db->insert_id;
+            if($id == 0)
+                ErrorHandler::displayError("", 500);
+            return $id; // I assume it's always an int, such a number of orders to exceed it is unlikely
+        }
     }
 ?>

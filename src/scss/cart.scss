@@ -12,6 +12,10 @@
     }
 }
 
+#main-container{
+    position: relative;
+}
+
 .product{
     @include mix.card;
     padding: 0.75rem;

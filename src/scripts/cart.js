@@ -1,3 +1,5 @@
+import { showNotification } from './notifications.js';
+
 document.querySelector('.empty-cart__msg').textContent = 'WHY IS YOUR CART EMPTY??';
 let cart = localStorage.getItem('cart');
 
@@ -62,7 +64,20 @@ if(cart != null){
                     window.location.replace('/Totalitarian/src/error/error_page.php')
                 if(json['status'] === 'redirect')
                     window.location.replace('/Totalitarian/src/auth/login.php')
+                if(json['status'] === 'outOfStock'){
+                    let idOutOfStock = json['outOfStock'];
+                    let productName = document.querySelector(`#prod${idOutOfStock} .product__info__name`).textContent;
+                    showNotification('#main-container', `Not enough ${productName} in stock!`, false);
+                }
+                if(json['status'] === 'ok'){
+                    showNotification('#main-container', 'Order placed successfully!', true);
+                    localStorage.removeItem('cart');
+                    cart = [];
+                    checkout.remove();
+                    productList.innerHTML = '';
+                }
             })
+            .catch(error => console.log(error));
         })
     })
 }

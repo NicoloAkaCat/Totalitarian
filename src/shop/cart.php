@@ -28,7 +28,7 @@
     <?php
         include(VarUtils::getDocumentRoot()."components/header.php");
     ?>
-    <main class="container column flex-center">
+    <main class="container column flex-center" id="main-container">
         <h1 class="page-title text-large">CART</h1>
 
         <section class="empty-cart column flex-center">
@@ -39,6 +39,6 @@
         <section class="product-list"></section> <!-- populated by JS -->
     </main>
     <script src="/Totalitarian/src/scripts/main.js"></script>
-    <script src="/Totalitarian/src/scripts/cart.js"></script>
+    <script src="/Totalitarian/src/scripts/cart.js" type="module"></script>
 </body>
 </html>
