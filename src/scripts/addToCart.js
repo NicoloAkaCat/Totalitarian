@@ -17,6 +17,7 @@ const toAdd = {
 }
 
 btn.addEventListener('click', (e) => {
+    e.preventDefault();
     let cart = localStorage.getItem('cart');
     if(cart === null)
         cart = [toAdd];
@@ -24,7 +25,6 @@ btn.addEventListener('click', (e) => {
         cart = JSON.parse(cart);
         for(let i = 0; i < cart.length; i++){
             if(cart[i].id === toAdd.id){
-                e.preventDefault();
                 showNotification('#main-container', 'Item already in cart', false);
                 return;
             }
@@ -32,6 +32,5 @@ btn.addEventListener('click', (e) => {
         cart.push(toAdd);
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    e.preventDefault();
     showNotification('#main-container', 'Item added to cart!', true);
 })

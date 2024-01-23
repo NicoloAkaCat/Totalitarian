@@ -77,7 +77,7 @@ if(cart != null){
                     productList.innerHTML = '';
                 }
             })
-            .catch(error => console.log(error));
+            .catch(e => alert('Something went wrong, Try Again'));
         })
     })
 }
@@ -117,5 +117,5 @@ function checkProducts(productIds){
         if(json['status'] === 'ok')
             return;
     })
-    .catch(error => console.log(error));
+    .catch(e => alert('Something went wrong, Try Again'));
 }

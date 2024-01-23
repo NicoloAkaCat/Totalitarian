@@ -1,4 +1,4 @@
-import { removeFormError, showFormError } from './FormUtils.js';
+import { removeFormError, showFormError } from './formUtils.js';
 
 const email = document.querySelector('#email');
 const pass = document.querySelector('#pass');

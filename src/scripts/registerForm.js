@@ -1,4 +1,4 @@
-import { showFormError, removeFormError, emailRegex } from './FormUtils.js';
+import { showFormError, removeFormError, emailRegex } from './formUtils.js';
 
 const firstName = document.querySelector('#firstname');
 const lastName = document.querySelector('#lastname');
@@ -23,7 +23,7 @@ email.addEventListener('change', () => {
         else
             removeFormError(email, 'Email already in use');
     })
-    .catch((error) => console.log(error));
+    .catch(e => alert('Something went wrong, Try Again'));
 
     if(!emailRegex.test(email.value))
         showFormError(email, 'Invalid email');
