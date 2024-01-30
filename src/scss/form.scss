@@ -11,22 +11,23 @@ main{
 .form{
     @include mix.card;
     max-width: 700px;
-    width: 75%;
+    width: 100%;
     padding: 1.25em;
     margin: 0 auto;
     text-align: center;
 
-    label{
+    &__label{
         display: block;
     }
 
-    input{
+    &__input{
         background-color: lighten(var.$primary-clr, 65%);
         color: var.$primary-clr;
+        width: 90%;
         max-width: 400px;
+        border-radius: 0.625rem;
         padding: 0.5em;
         margin-bottom: 1em;
-        border-radius: 0.625rem;
         border: 2px solid transparent;
         text-align: center;
         &:focus-visible{
@@ -40,50 +41,47 @@ main{
             text-align: center;
             opacity: 0.4;
         }
-    }
 
-    input:not([type="checkbox"]){
-        width: 70%;
-    }
+        &--submit{
+            @include mix.button;
+            max-width: 200px;
+            margin-top: 1.7em;
+        }
 
-    input[type="checkbox"]{
-        display: block;
-        height: 2em;
-        width: 2em;
-        margin: 5px auto;
-        accent-color: var.$shade-clr;
-        &:hover{
-            cursor: pointer;
-            accent-color: var.$secondary-clr;
+        &--checkbox{
+            display: block;
+            height: 2em;
+            width: 2em;
+            margin: 5px auto;
+            accent-color: var.$shade-clr;
+            &:hover{
+                cursor: pointer;
+                accent-color: var.$secondary-clr;
+            }
+        }
+
+        &--error{
+            animation: err 0.2s linear;
+            margin-bottom: 0;
+            border: 2px solid var.$failure-clr-lighten;
+            box-shadow: 0px 0px 2px 2px var.$failure-clr-lighten;
         }
     }
 
-    input[type="submit"]{
-        @include mix.button;
-        max-width: 200px;
-        margin-top: 1.7em;
-    }
-    
-    .form-err-msg{
+    &__error-msg{
         margin-bottom: 0.4em;
         color: var.$err-clr;
     }
 
-    .form-err-animation{
-        animation: err 0.2s linear;
-        margin-bottom: 0;
-        border: 2px solid var.$err-clr;
-    }
-}
-
-@keyframes err{
-    0%, 100%{
-        transform: translateX(0);
-    }
-    40%{
-        transform: translateX(20px);
-    }
-    80%{
-        transform: translateX(-20px);
+    @keyframes err{
+        0%, 100%{
+            transform: translateX(0);
+        }
+        40%{
+            transform: translateX(20px);
+        }
+        80%{
+            transform: translateX(-20px);
+        }
     }
 }

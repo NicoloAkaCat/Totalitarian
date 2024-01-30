@@ -13,71 +13,58 @@ main {
           box-shadow: 0px 0px 2px 2px #431708;
   border-radius: 0.625rem;
   max-width: 700px;
-  width: 75%;
+  width: 100%;
   padding: 1.25em;
   margin: 0 auto;
   text-align: center;
 }
-.form label {
+.form__label {
   display: block;
 }
-.form input {
+.form__input {
   background-color: #d6d6d6;
   color: #303030;
+  width: 90%;
   max-width: 400px;
+  border-radius: 0.625rem;
   padding: 0.5em;
   margin-bottom: 1em;
-  border-radius: 0.625rem;
   border: 2px solid transparent;
   text-align: center;
 }
-.form input:focus-visible {
+.form__input:focus-visible {
   outline: none;
   background-color: #FAF8FF;
   border: 2px solid #431708;
   -webkit-box-shadow: 0px 0px 4px 4px #431708;
           box-shadow: 0px 0px 4px 4px #431708;
 }
-.form input::-webkit-input-placeholder {
+.form__input::-webkit-input-placeholder {
   font-size: clamp(0.875rem, 0.9615384615vw + 0.5288461538rem, 1.125rem);
   text-align: center;
   opacity: 0.4;
 }
-.form input::-moz-placeholder {
+.form__input::-moz-placeholder {
   font-size: clamp(0.875rem, 0.9615384615vw + 0.5288461538rem, 1.125rem);
   text-align: center;
   opacity: 0.4;
 }
-.form input:-ms-input-placeholder {
+.form__input:-ms-input-placeholder {
   font-size: clamp(0.875rem, 0.9615384615vw + 0.5288461538rem, 1.125rem);
   text-align: center;
   opacity: 0.4;
 }
-.form input::-ms-input-placeholder {
+.form__input::-ms-input-placeholder {
   font-size: clamp(0.875rem, 0.9615384615vw + 0.5288461538rem, 1.125rem);
   text-align: center;
   opacity: 0.4;
 }
-.form input::placeholder {
+.form__input::placeholder {
   font-size: clamp(0.875rem, 0.9615384615vw + 0.5288461538rem, 1.125rem);
   text-align: center;
   opacity: 0.4;
 }
-.form input:not([type=checkbox]) {
-  width: 70%;
-}
-.form input[type=checkbox] {
-  display: block;
-  height: 2em;
-  width: 2em;
-  margin: 5px auto;
-  accent-color: #431708;
-}
-.form input[type=checkbox]:hover {
-  cursor: pointer;
-  accent-color: #FAF8FF;
-}
-.form input[type=submit] {
+.form__input--submit {
   padding: 0.5em 1em;
   border-radius: 0.625rem;
   border: 2px solid transparent;
@@ -91,36 +78,48 @@ main {
   max-width: 200px;
   margin-top: 1.7em;
 }
-.form input[type=submit] i {
+.form__input--submit i {
   padding-right: 0.5rem;
   color: #303030;
 }
-.form input[type=submit]:hover {
+.form__input--submit:hover {
   background-color: #431708;
   -webkit-box-shadow: 0px 0px 4px 1px #431708;
           box-shadow: 0px 0px 4px 1px #431708;
   color: #FAF8FF;
 }
-.form input[type=submit]:hover i {
+.form__input--submit:hover i {
   color: #FAF8FF;
 }
-.form input[type=submit]:focus-visible {
+.form__input--submit:focus-visible {
   outline: none;
   -webkit-box-shadow: 0px 0px 4px 4px #431708;
           box-shadow: 0px 0px 4px 4px #431708;
   border: 2px solid #431708;
 }
-.form .form-err-msg {
-  margin-bottom: 0.4em;
-  color: #d70019;
+.form__input--checkbox {
+  display: block;
+  height: 2em;
+  width: 2em;
+  margin: 5px auto;
+  accent-color: #431708;
 }
-.form .form-err-animation {
+.form__input--checkbox:hover {
+  cursor: pointer;
+  accent-color: #FAF8FF;
+}
+.form__input--error {
   -webkit-animation: err 0.2s linear;
           animation: err 0.2s linear;
   margin-bottom: 0;
-  border: 2px solid #d70019;
+  border: 2px solid #7f1818;
+  -webkit-box-shadow: 0px 0px 2px 2px #7f1818;
+          box-shadow: 0px 0px 2px 2px #7f1818;
 }
-
+.form__error-msg {
+  margin-bottom: 0.4em;
+  color: #d70019;
+}
 @-webkit-keyframes err {
   0%, 100% {
     -webkit-transform: translateX(0);
@@ -135,7 +134,6 @@ main {
             transform: translateX(-20px);
   }
 }
-
 @keyframes err {
   0%, 100% {
     -webkit-transform: translateX(0);
