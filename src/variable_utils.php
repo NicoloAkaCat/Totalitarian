@@ -27,5 +27,10 @@
             $emailRegex = "/^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$/";
             return preg_match($emailRegex, $email);
         }
+
+        public static function checkValidPassword(string $password): bool{
+            $passwordRegex = "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/";
+            return preg_match($passwordRegex, $password);
+        }
     }
 ?>

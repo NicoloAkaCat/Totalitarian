@@ -41,7 +41,7 @@
         $query->close();
         $db->close();
 
-        if($result->num_rows <= 0){
+        if($result->num_rows != 1){
             echo '<div class="notification notification--failure no-animate text-small">User not found</div>';
             throw new Exception();
         }

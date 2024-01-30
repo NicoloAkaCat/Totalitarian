@@ -165,6 +165,7 @@ img {
 .no-animate {
   -webkit-animation: none;
           animation: none;
+  position: relative;
 }
 
 body {

@@ -36,6 +36,11 @@
 			throw new Exception();
 		}
 
+		if(!VarUtils::checkValidPassword($_POST["pass"])){
+			echo '<div class="notification notification--failure no-animate text-small">Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character</div>';
+			throw new Exception();
+		}
+
 		$user = new User($_POST["firstname"], $_POST["lastname"], $_POST["email"], $_POST["pass"]);
 
 		$db = new Database();
