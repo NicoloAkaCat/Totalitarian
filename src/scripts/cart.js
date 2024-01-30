@@ -15,7 +15,7 @@ if(cart != null){
     .then(() => {
         const productList = document.querySelector('.product-list');
         productList.insertAdjacentHTML('afterend', `
-            <a href="./cart.php?js=false" class="checkout btn text-medium">Checkout</a>
+            <a href="./cart.php?js=false" class="checkout btn text-medium" role="button">Checkout</a>
         `)
         const checkout = document.querySelector('.checkout');
 
@@ -87,15 +87,15 @@ if(cart != null){
 function buildProduct(products, product) {
     products.insertAdjacentHTML('beforeend', `
         <article class="product row" id="prod${product.id}">
-            <button class="product__remove" id="rm${product.id}"><span>&#10005;</span></button>
+            <button class="product__remove" id="rm${product.id}" aria-label="remove from cart"><span>&#10005;</span></button>
             <img class="product__img" src="${product.imgSrc}" alt="${product.imgAlt}">
             <div class="product__info row flex-center">
                 <div class="product__info__name text-small">${product.productName}</div>
                 <div class="product__info__price text-small">${product.price}</div>
                 <div class="product__info__quantity column flex-center text-small">
-                    <button class="product__info__quantity__plus text-small" id="plus${product.id}"><span>&#43;</span></button>
+                    <button class="product__info__quantity__plus text-small" id="plus${product.id}" aria-label="increase quantity by 1"><span>&#43;</span></button>
                     <div class="product__info__quantity__value text-small" id="value${product.id}">1</div>
-                    <button class="product__info__quantity__minus text-small" id="minus${product.id}"><span>&#8722;</span></button>
+                    <button class="product__info__quantity__minus text-small" id="minus${product.id}" aria-label="decrease quantity by 1"><span>&#8722;</span></button>
                 </div>
             </div>
         </article>`
