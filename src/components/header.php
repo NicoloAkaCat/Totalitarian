@@ -11,7 +11,7 @@
                 <img src="/Totalitarian/src/assets/logo_icon_white.svg" alt="Totalitarian logo">
             </a>
             <a href="/Totalitarian/src/index.php" class="logo__title text-medium">Totalitarian</a>
-            <div class="menu column flex-center" aria-label="menu button"><div class="menu__hamburger"></div></div>
+            <div class="menu-hamburger"><button aria-label="menu"></button></div>
         </div>
         
 

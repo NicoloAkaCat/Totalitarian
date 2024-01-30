@@ -138,35 +138,37 @@ header{
             display: none;
             position: absolute;
         }
-        .menu{
-            &__hamburger,
-            &__hamburger::before,
-            &__hamburger::after{
+        .menu-hamburger{
+            position: relative;
+            button{
+                position: absolute;
+                opacity: 0;
+            }
+            &, 
+            &::before, 
+            &::after{
                 transition: transform 0.2s ease;
                 height: 4px;
                 width: 30px;
                 background-color: var.$secondary-clr;
                 border-radius: 2px;
             }
-    
-            &__hamburger::before,
-            &__hamburger::after{
+            &::before, 
+            &::after{
                 display: block;
                 content: '';
             }
-    
-            &__hamburger::before{
+            &::before{
                 transform: translateY(-8px);
             }
-    
-            &__hamburger::after{
+            &::after{
                 transform: translateY(4px);
             }
-
-            .hamburger--animation{
+            &--animation{
                 visibility: hidden;
                 &::before,
-                &::after{
+                &::after,
+                button{
                     visibility: visible;
                 }
                 &::before{
@@ -241,7 +243,7 @@ header{
                 font-family: 'Dictator Regular', system-ui, sans-serif;
                 color: var.$secondary-clr;
             }
-            .menu{
+            .menu-hamburger{
                 display: none;
                 position: absolute;
             }

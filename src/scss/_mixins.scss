@@ -32,6 +32,7 @@
         }
     }
 
+    &:focus,
     &:focus-visible{
         outline: none;
         box-shadow: 0px 0px 4px 4px var.$shade-clr;
