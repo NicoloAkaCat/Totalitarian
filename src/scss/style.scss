@@ -77,6 +77,18 @@ img{
     border-radius: 0.625rem;
     opacity: 0.95;
     animation: popUp 2s ease;
+
+    &--success{
+        background-color: var.$success-clr;
+        border: 2px solid var.$success-clr-lighten;
+        color: var.$secondary-clr;
+    }
+
+    &--failure{
+        background-color: var.$failure-clr;
+        border: 2px solid var.$failure-clr-lighten;
+        color: var.$secondary-clr;
+    }
 }
 
 @keyframes popUp{
@@ -94,18 +106,6 @@ img{
     100%{
         opacity: 0;
     }
-}
-
-.notification--success{
-    background-color: var.$success-clr;
-    border: 2px solid var.$success-clr-lighten;
-    color: var.$secondary-clr;
-}
-
-.notification--failure{
-    background-color: var.$failure-clr;
-    border: 2px solid var.$failure-clr-lighten;
-    color: var.$secondary-clr;
 }
 
 .no-animate{
@@ -183,11 +183,10 @@ header{
     .nav{
         visibility: hidden;
         display: none;
-    }
-
-    .nav--visible{
-        visibility: visible;
-        display: block;
+        &--visible{
+            visibility: visible;
+            display: block; 
+        }
     }
 
     .nav__list{
@@ -196,20 +195,20 @@ header{
         padding: 0.5rem 0 ;
         text-align: center;
 
-        .nav__item{
+        &__item{
             text-transform: uppercase;
             margin: 0 auto;
             width: 50%;
 
-            .nav__link,
-            .nav__link:visited{
+            &__link,
+            &__link:visited{
                 display: block;
                 width: 100%;
                 @include mix.button;
             }
         }
 
-        .nav__item:not(:first-child){
+        &__item:not(:first-child){
             margin: 1rem auto;
         }
     }
@@ -255,9 +254,9 @@ header{
                 display: flex;
                 align-items: center;
                 gap: 0.5rem;
-                .nav__item{
+                &__item{
                     width: auto;
-                    .nav__link{
+                    &__link{
                         i{
                             padding: 0;
                         }

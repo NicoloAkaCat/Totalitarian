@@ -114,6 +114,16 @@ img {
   -webkit-animation: popUp 2s ease;
           animation: popUp 2s ease;
 }
+.notification--success {
+  background-color: #2F5B22;
+  border: 2px solid #376a28;
+  color: #FAF8FF;
+}
+.notification--failure {
+  background-color: #6E1515;
+  border: 2px solid #7f1818;
+  color: #FAF8FF;
+}
 
 @-webkit-keyframes popUp {
   0% {
@@ -152,18 +162,6 @@ img {
     opacity: 0;
   }
 }
-.notification--success {
-  background-color: #2F5B22;
-  border: 2px solid #376a28;
-  color: #FAF8FF;
-}
-
-.notification--failure {
-  background-color: #6E1515;
-  border: 2px solid #7f1818;
-  color: #FAF8FF;
-}
-
 .no-animate {
   -webkit-animation: none;
           animation: none;
@@ -250,13 +248,12 @@ header .nav__list {
   padding: 0.5rem 0;
   text-align: center;
 }
-header .nav__list .nav__item {
+header .nav__list__item {
   text-transform: uppercase;
   margin: 0 auto;
   width: 50%;
 }
-header .nav__list .nav__item .nav__link,
-header .nav__list .nav__item .nav__link:visited {
+header .nav__list__item__link, header .nav__list__item__link:visited {
   display: block;
   width: 100%;
   padding: 0.5em 1em;
@@ -270,30 +267,26 @@ header .nav__list .nav__item .nav__link:visited {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-header .nav__list .nav__item .nav__link i,
-header .nav__list .nav__item .nav__link:visited i {
+header .nav__list__item__link i, header .nav__list__item__link:visited i {
   padding-right: 0.5rem;
   color: #303030;
 }
-header .nav__list .nav__item .nav__link:hover,
-header .nav__list .nav__item .nav__link:visited:hover {
+header .nav__list__item__link:hover, header .nav__list__item__link:visited:hover {
   background-color: #431708;
   -webkit-box-shadow: 0px 0px 4px 1px #431708;
           box-shadow: 0px 0px 4px 1px #431708;
   color: #FAF8FF;
 }
-header .nav__list .nav__item .nav__link:hover i,
-header .nav__list .nav__item .nav__link:visited:hover i {
+header .nav__list__item__link:hover i, header .nav__list__item__link:visited:hover i {
   color: #FAF8FF;
 }
-header .nav__list .nav__item .nav__link:focus-visible,
-header .nav__list .nav__item .nav__link:visited:focus-visible {
+header .nav__list__item__link:focus-visible, header .nav__list__item__link:visited:focus-visible {
   outline: none;
   -webkit-box-shadow: 0px 0px 4px 4px #431708;
           box-shadow: 0px 0px 4px 4px #431708;
   border: 2px solid #431708;
 }
-header .nav__list .nav__item:not(:first-child) {
+header .nav__list__item:not(:first-child) {
   margin: 1rem auto;
 }
 
@@ -343,22 +336,22 @@ header .nav__list .nav__item:not(:first-child) {
             align-items: center;
     gap: 0.5rem;
   }
-  header .nav__list .nav__item {
+  header .nav__list__item {
     width: auto;
   }
-  header .nav__list .nav__item .nav__link i {
+  header .nav__list__item__link i {
     padding: 0;
   }
-  header .nav__list .nav__item .nav__link span {
+  header .nav__list__item__link span {
     display: none;
   }
-  header .nav__list .nav__item .nav__link:hover i {
+  header .nav__list__item__link:hover i {
     padding-right: 0.5rem;
   }
-  header .nav__list .nav__item .nav__link:hover span {
+  header .nav__list__item__link:hover span {
     display: inline-block;
   }
-  header .nav__list .nav__item .nav__link:hover i, header .nav__list .nav__item .nav__link:hover span {
+  header .nav__list__item__link:hover i, header .nav__list__item__link:hover span {
     -webkit-animation: slideIn 0.2s linear;
             animation: slideIn 0.2s linear;
   }

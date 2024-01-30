@@ -17,23 +17,23 @@
 
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="/Totalitarian/src/shop/shop.php" class="nav__link text-small"><i class="fa-solid fa-bag-shopping"></i><span>Shop</span></a>
+                <li class="nav__list__item">
+                    <a href="/Totalitarian/src/shop/shop.php" class="nav__list__item__link text-small"><i class="fa-solid fa-bag-shopping"></i><span>Shop</span></a>
                 </li>
-                <li class="nav__item">
-                    <a href="/Totalitarian/src/shop/cart.php" class="nav__link text-small"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
+                <li class="nav__list__item">
+                    <a href="/Totalitarian/src/shop/cart.php" class="nav__list__item__link text-small"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
                 </li>
                 <?php
                 if(VarUtils::checkIsSetInArray($_SESSION, "UID"))
-                    echo '<li class="nav__item">
-                            <a href="/Totalitarian/src/auth/logout.php" class="nav__link text-small"><i class="fa-solid fa-right-to-bracket"></i><span>Logout</span></a>
+                    echo '<li class="nav__list__item">
+                            <a href="/Totalitarian/src/auth/logout.php" class="nav__list__item__link text-small"><i class="fa-solid fa-right-to-bracket"></i><span>Logout</span></a>
                         </li>';
                 else
-                    echo '<li class="nav__item">
-                            <a href="/Totalitarian/src/auth/login.php" class="nav__link text-small"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
+                    echo '<li class="nav__list__item">
+                            <a href="/Totalitarian/src/auth/login.php" class="nav__list__item__link text-small"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
                         </li>
-                        <li class="nav__item">
-                            <a href="/Totalitarian/src/auth/register.php" class="nav__link text-small"><i class="fa-solid fa-address-card"></i><span>Sign-In</span></a>
+                        <li class="nav__list__item">
+                            <a href="/Totalitarian/src/auth/register.php" class="nav__list__item__link text-small"><i class="fa-solid fa-address-card"></i><span>Sign-In</span></a>
                         </li>';
                 ?>
             </ul>
