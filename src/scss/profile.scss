@@ -1,0 +1,57 @@
+@use 'variables' as var;
+@use 'mixins' as mix;
+
+.profile{
+    @include mix.card;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    &__img{
+        width: 35%;
+        padding: 1em;
+        background-color: var.$shade-clr;
+        border-radius: 50%;
+        box-shadow: 0px 0px 3px 3px var.$primary-clr;
+    }
+    &__name,
+    &__email{
+        background-color: var.$primary-clr;
+        padding: 0.5em;
+        border-radius: 0.625rem;
+        box-shadow: 0px 0px 3px 3px var.$primary-clr;
+    }
+    &__update{
+        &__info,
+        &__password{
+            margin: 0.5rem 0;
+        }
+        &__info{
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    .profile{
+        &__img{
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: 900px){
+    .profile{
+        &__img{
+            width: 15%;
+        }
+        &__update{
+            flex-direction: row;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            &__info{
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
