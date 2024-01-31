@@ -2,7 +2,7 @@
     Equations found on article: https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/
     Here, ($min-font, $max-font) = (y1, y2) and ($min-vw, $max-vw) = (x1, x2) 
 ***/
-main {
+#main-container {
   min-height: 100svh;
 }
 

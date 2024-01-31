@@ -84,7 +84,7 @@
     <script src="https://kit.fontawesome.com/9d36b0df12.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="container column flex-center">
+    <main class="container column flex-center" id="main-container">
         <?php  
             try{
                 login();

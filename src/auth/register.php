@@ -83,7 +83,7 @@
 </head>
 
 <body>
-	<main class="container column flex-center">
+	<main class="container column flex-center" id="main-container">
 		<?php
 			try{
 				register();
