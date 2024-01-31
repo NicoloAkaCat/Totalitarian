@@ -46,8 +46,14 @@
     <?php
         include(VarUtils::getDocumentRoot()."components/header.php");
     ?>
-    <main class="container">
+    <main class="container column flex-center" id="main-container">
         <h1 class="page-title text-large">PROFILE</h1>
+        <?php
+            if(VarUtils::checkIsSetInArray($_SESSION, "notification")){
+                echo '<div id="js-notify"></div>';
+                Session::unsetSessionVar("notification");
+            }
+        ?>
 
         <section class="profile column flex-center">
             <img src="/Totalitarian/src/assets/logo_icon_white.svg" alt="default profile picture" class="profile__img">
@@ -62,5 +68,6 @@
         </section>
     </main>
     <script src="/Totalitarian/src/scripts/main.js"></script>
+    <script src="/Totalitarian/src/scripts/profile.js" type="module"></script>
 </body>
 </html>

@@ -56,6 +56,7 @@
         $query->close();
         $db->close();
         Session::setSessionVar("email", $newEmail);
+        Session::setSessionVar("notification", true);
         header("Location: /Totalitarian/src/profile/show_profile.php");
         exit(0);
     }
