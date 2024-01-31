@@ -7,7 +7,7 @@
 	Session::startSession();
     if(!VarUtils::checkIsSetInArray($_SESSION, "UID")){
         if(VarUtils::checkIsSetInArray($_COOKIE, "UID"))
-            Session::checkRememberCookie($_COOKIE["UID"]);
+            Session::loginWithCookie($_COOKIE["UID"]);
     }
         
 ?>

@@ -9,7 +9,7 @@
 	Session::startSession();
 	if(!VarUtils::checkIsSetInArray($_SESSION, "UID")){
         if(VarUtils::checkIsSetInArray($_COOKIE, "UID"))
-            Session::checkRememberCookie($_COOKIE["UID"]);
+            Session::loginWithCookie($_COOKIE["UID"]);
     }
 
     if(VarUtils::checkIsSetInArray($_GET, "js") && $_GET["js"] == "false")

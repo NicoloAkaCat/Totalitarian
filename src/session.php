@@ -25,13 +25,6 @@
             }
         }
 
-        public static function checkRedirectionIfLogged(){
-            if(VarUtils::checkIsSetInArray($_SESSION, "UID")){
-                header("Location: /Totalitarian/src/index.php");
-                exit(0);
-            }
-        }
-
         public static function destroySession(): void{
             $_SESSION = array();
             if(!session_destroy())
@@ -70,7 +63,7 @@
             return bin2hex(random_bytes(64));
         }
 
-        public static function checkRememberCookie(string $token): void{
+        public static function loginWithCookie(string $token): void{
             $db = new Database();
             $db->connect();
             $query = $db->prepare("SELECT * FROM users WHERE token = ?");

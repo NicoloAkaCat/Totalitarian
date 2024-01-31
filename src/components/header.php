@@ -26,6 +26,9 @@
                 <?php
                 if(VarUtils::checkIsSetInArray($_SESSION, "UID"))
                     echo '<li class="nav__list__item">
+                            <a href="/Totalitarian/src/profile/show_profile.php" class="nav__list__item__link text-small"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+                        </li>
+                        <li class="nav__list__item">
                             <a href="/Totalitarian/src/auth/logout.php" class="nav__list__item__link text-small"><i class="fa-solid fa-right-to-bracket"></i><span>Logout</span></a>
                         </li>';
                 else

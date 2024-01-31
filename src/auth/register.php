@@ -7,11 +7,14 @@
 	
 	ErrorHandler::init();
 	Session::startSession();
-    Session::checkRedirectionIfLogged();
 	
 	if(VarUtils::checkIsSetInArray($_COOKIE, "UID"))
-        Session::checkRememberCookie($_COOKIE["UID"]);
+        Session::loginWithCookie($_COOKIE["UID"]);
 	
+	if(VarUtils::checkIsSetInArray($_SESSION, "UID")){
+		header("Location: /Totalitarian/src/index.php");
+		exit(0);
+	} 
 
 	function register(): void{
 
