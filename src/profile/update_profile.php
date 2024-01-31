@@ -43,6 +43,11 @@
             throw new Exception();
         }
 
+        if(!VarUtils::checkValidEmail($_POST["email"])){
+			echo '<div class="notification notification--failure no-animate text-small">Invalid email</div>';
+			throw new Exception();
+		}
+
         $newFirstname = trim($_POST["firstname"]);
         $newLastname = trim($_POST["lastname"]);
         $newEmail = trim($_POST["email"]);
@@ -101,6 +106,6 @@
         <a href="/Totalitarian/src/profile/show_profile.php" class="btn"><span aria-hidden="true">&#x25c0;</span> Back to Profile</a>
     </main>
     <script src="/Totalitarian/src/scripts/main.js"></script>
-    <script src="/Totalitarian/src/scripts/updateForm.js" type="module"></script>
+    <script src="/Totalitarian/src/scripts/updateProfileForm.js" type="module"></script>
 </body>
 </html>

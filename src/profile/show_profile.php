@@ -63,7 +63,7 @@
             <h2 class="profile__email text-medium"><?php echo htmlspecialchars($user->getEmail());?></h2>
             <div class="profile__update column flex-center">
                 <a href="/Totalitarian/src/profile/update_profile.php" class="profile__update__info btn text-small"><i class="fa-solid fa-user"></i>Update Profile</a>
-                <a href="/Totalitarian/src/profile/update_password.php" class="profile__update__password btn text-small"><i class="fa-solid fa-key"></i>Change Password</a>
+                <a href="/Totalitarian/src/profile/change_password.php" class="profile__update__password btn text-small"><i class="fa-solid fa-key"></i>Change Password</a>
             </div>
         </section>
     </main>
