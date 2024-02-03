@@ -45,7 +45,7 @@
                 if(VarUtils::checkIsSetInArray($_GET, "search") && !VarUtils::checkIsEmptyInArray($_GET, "search")){
                     $search = $_GET["search"];
                     $query = $db->prepare("SELECT * FROM products WHERE name LIKE ?");
-                    $db->bindParam($query, 's', $search);
+                    $db->bindParam($query, 's', "%".$search."%");
                 }
                 else
                     $query = $db->prepare("SELECT * FROM products");
