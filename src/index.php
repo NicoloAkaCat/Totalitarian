@@ -17,6 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Totalitarian/src/styles/style.css">
+    <link rel="stylesheet" href="/Totalitarian/src/styles/homepage.css">
     <link rel="icon" href="/Totalitarian/src/assets/logo_icon_white.svg" type="image/x-icon">
     <title>Totalitarian</title>
     <script src="https://kit.fontawesome.com/9d36b0df12.js" crossorigin="anonymous"></script>
@@ -24,7 +25,7 @@
 <body>
     <?php
         include(VarUtils::getDocumentRoot()."components/header.php");
-        include(VarUtils::getDocumentRoot()."components/main.php");
+        include(VarUtils::getDocumentRoot()."components/homepage.php");
     ?>
     <script src="/Totalitarian/src/scripts/main.js"></script>
 </body>

@@ -1,0 +1,113 @@
+@use 'variables' as var;
+@use 'mixins' as mix;
+
+header{
+    position: fixed;
+    z-index: 9999;
+}
+
+section{
+    min-height: 100svh;
+    text-align: center;
+}
+
+.divider{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, var.$shade-clr, var.$secondary-clr, var.$shade-clr );
+    &--presentation{
+        background-image: linear-gradient(to right, var.$shade-clr, var.$secondary-clr);
+    }
+    &--features{
+        background-image: linear-gradient(to left, var.$shade-clr, var.$secondary-clr);
+    }
+}
+
+.title{
+    background-image: linear-gradient(to bottom,  var.$primary-clr 10%, var.$shade-clr );
+    &__name{
+        font-family: Dictator Regular, system-ui, sans-serif;
+    }
+}
+
+.presentation{
+    background-image: linear-gradient(to left bottom,  var.$primary-clr 30%, var.$shade-clr );
+    &__title{
+        margin-bottom: 1rem;
+    }
+    &__imgs{
+        margin: 1rem 0 -1.5rem 0;
+        &__product{
+            @include mix.card;
+            width: 50%;
+            box-shadow: 0px 0px 4px 4px var.$shade-clr;
+        }
+        &__product:nth-child(1){
+            transform: translateY(25%) translateX(25%);
+            z-index: 1;
+        }
+        &__product:nth-child(2){
+            z-index: 2;
+        }
+        &__product:nth-child(3){
+            transform: translateY(-25%) translateX(-25%);
+            z-index: 3;
+        }
+    }
+}
+
+.features{
+    background-image: linear-gradient(to right bottom,  var.$primary-clr 30%, var.$shade-clr );
+    &__list{
+        gap: 1.5rem;
+        align-items: stretch;
+        &__feature{
+            @include mix.card;
+            padding: 1.5rem;
+        }
+    }
+}
+
+.cta{
+    background-image: linear-gradient(var.$primary-clr 30%, var.$shade-clr );
+    &__list{
+        gap: 5rem;
+        &__article{
+            &__btn{
+                text-decoration: none;
+                color: var.$secondary-clr;
+                font-weight: bold;
+                background-image: linear-gradient(to right, var.$secondary-clr 20%, var.$shade-clr);
+                background-size: 0 3px;
+                background-repeat: no-repeat;
+                background-position: left bottom;
+                transition: all 0.1s ease;
+                &:hover,
+                &:focus,
+                &:focus-visible{
+                    background-size: 100% 3px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 600px){
+    .presentation{
+        &__imgs{
+            flex-direction: row;
+            margin-top: 4rem;
+            &__product{
+                width: 20%;
+            }
+            &__product:nth-child(1){
+                transform: translateX(25%) translateY(15%);
+            }
+            &__product:nth-child(3){
+                transform: translateX(-25%) translateY(-15%);
+            }
+        }
+    }
+}
