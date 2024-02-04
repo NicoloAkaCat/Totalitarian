@@ -48,9 +48,9 @@
     ?>
     <main>
         <div class="container column flex-center" id="main-container">
-            <div class="product column flex-center">
+            <article class="product column flex-center">
                 <img src="<?php echo $product->getImage();?>" alt="<?php echo $product->getImageAlt();?>" class="product__image">
-                <div class="product__info">
+                <section class="product__info">
                     <h1 class="product__info__name text-medium"><?php echo $product->getName();?></h1>
                     <p class="product__info__description text-small"><?php echo $product->getDescription();?></p>
                     <div class="product__info__score text-small">
@@ -78,8 +78,8 @@
                         <div class="product__info__buy__price text-medium"><?php echo $product->getPrice();?> $</div>
                         <a href="./view_product.php?js=false" class="product__info__buy__btn btn text-medium" role="button">Add to Cart</a>
                     </div>
-                </div>
-            </div>
+                </section>
+            </article>
 
             <a href="/Totalitarian/src/shop/shop.php" class="back-button btn"><span aria-hidden="true">&#x25c0;</span>Back to Shop</a>
         </div>

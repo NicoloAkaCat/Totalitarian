@@ -49,14 +49,14 @@
 
     <section class="cta column flex-center">
         <div class="cta__list container column flex-center">
-            <article class="cta__list__article">
+            <div class="cta__list__article">
                 <p class="cta__list__article__title text-small"><em>Join The Winners</em></p>
                 <a href="/Totalitarian/src/auth/register.php" class="cta__list__article__btn text-large">REGISTER</a>
-            </article>
-            <article class="cta__list__article">
+            </div>
+            <div class="cta__list__article">
                 <p class="cta__list__article__title text-small"><em>Already Joined Us?</em></p>
                 <a href="/Totalitarian/src/auth/login.php" class="cta__list__article__btn text-large">LOGIN</a>
-            </article>
+            </div>
         </div>
     </section>
     
