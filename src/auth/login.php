@@ -65,8 +65,11 @@
         if(VarUtils::checkIsSetInArray($_POST, "remember"))
             Session::setRememberCookie($inputEmail);
 
-        if(VarUtils::checkIsSetInArray($_SESSION, "redirect"))
-            header("Location: ".Session::getSessionVar("redirect"));
+        if(VarUtils::checkIsSetInArray($_SESSION, "redirect")){
+            $redirect = Session::getSessionVar("redirect");
+            Session::unsetSessionVar("redirect");
+            header("Location: ".$redirect);
+        }
         else
             header("Location: /Totalitarian/src/index.php");
         exit(0);
@@ -77,8 +80,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Totalitarian/src/styles/style.css">
-    <link rel="stylesheet" href="/Totalitarian/src/styles/form.css">
+    <link rel="stylesheet" href="/Totalitarian/src/styles/style.css" type="text/css">
+    <link rel="stylesheet" href="/Totalitarian/src/styles/form.css" type="text/css">
     <link rel="icon" href="/Totalitarian/src/assets/logo_icon_white.svg" type="image/x-icon">
     <title>Login</title>
     <script src="https://kit.fontawesome.com/9d36b0df12.js" crossorigin="anonymous"></script>

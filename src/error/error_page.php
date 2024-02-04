@@ -13,8 +13,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Totalitarian/src/styles/style.css">
-    <link rel="stylesheet" href="/Totalitarian/src/styles/error.css">
+    <link rel="stylesheet" href="/Totalitarian/src/styles/style.css" type="text/css">
+    <link rel="stylesheet" href="/Totalitarian/src/styles/error.css" type="text/css">
     <link rel="icon" href="/Totalitarian/src/assets/logo_icon_white.svg" type="image/x-icon">
     <title>Error</title>
 </head>
