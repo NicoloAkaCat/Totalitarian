@@ -266,7 +266,9 @@ header{
                         span{
                             display: none;
                         }
-                        &:hover{
+                        &:hover,
+                        &:focus,
+                        &:focus-visible{
                             i{
                                 padding-right: 0.5rem;
                             }

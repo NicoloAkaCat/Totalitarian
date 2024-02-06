@@ -354,13 +354,13 @@ header .nav__list__item:not(:first-child) {
   header .nav__list__item__link span {
     display: none;
   }
-  header .nav__list__item__link:hover i {
+  header .nav__list__item__link:hover i, header .nav__list__item__link:focus i, header .nav__list__item__link:focus-visible i {
     padding-right: 0.5rem;
   }
-  header .nav__list__item__link:hover span {
+  header .nav__list__item__link:hover span, header .nav__list__item__link:focus span, header .nav__list__item__link:focus-visible span {
     display: inline-block;
   }
-  header .nav__list__item__link:hover i, header .nav__list__item__link:hover span {
+  header .nav__list__item__link:hover i, header .nav__list__item__link:hover span, header .nav__list__item__link:focus i, header .nav__list__item__link:focus span, header .nav__list__item__link:focus-visible i, header .nav__list__item__link:focus-visible span {
     -webkit-animation: slideIn 0.2s linear;
             animation: slideIn 0.2s linear;
   }
