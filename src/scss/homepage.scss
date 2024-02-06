@@ -92,7 +92,16 @@ section{
     }
 }
 
-
+.top-btn{
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    padding: 1rem;
+    z-index: 9999;
+    i{
+        padding: 0;
+    }
+}
 
 @media screen and (min-width: 600px){
     .presentation{
@@ -109,5 +118,10 @@ section{
                 transform: translateX(-25%) translateY(-15%);
             }
         }
+    }
+
+    .top-btn{
+        right: 3rem;
+        bottom: 3rem;
     }
 }

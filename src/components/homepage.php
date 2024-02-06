@@ -60,4 +60,5 @@
         </div>
     </section>
     
+    <a href="#" class="top-btn btn"><i class="fa-solid fa-arrow-up"></i></a>
 </main>

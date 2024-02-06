@@ -107,6 +107,17 @@ section {
   background-size: 100% 3px;
 }
 
+.top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  padding: 1rem;
+  z-index: 9999;
+}
+.top-btn i {
+  padding: 0;
+}
+
 @media screen and (min-width: 600px) {
   .presentation__imgs {
     -webkit-box-orient: horizontal;
@@ -125,5 +136,9 @@ section {
   .presentation__imgs__product:nth-child(3) {
     -webkit-transform: translateX(-25%) translateY(-15%);
             transform: translateX(-25%) translateY(-15%);
+  }
+  .top-btn {
+    right: 3rem;
+    bottom: 3rem;
   }
 }
