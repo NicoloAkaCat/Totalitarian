@@ -28,5 +28,6 @@
         include(VarUtils::getDocumentRoot()."components/homepage.php");
     ?>
     <script src="/Totalitarian/src/scripts/main.js"></script>
+    <script src="/Totalitarian/src/scripts/homepage.js"></script>
 </body>
 </html>
