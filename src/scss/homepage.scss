@@ -30,8 +30,16 @@ section{
 
 .title{
     background-image: linear-gradient(to bottom,  var.$primary-clr 10%, var.$shade-clr );
+    position: relative;
     &__name{
         font-family: Dictator Regular, system-ui, sans-serif;
+    }
+    &__btn{
+        margin: 0;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 

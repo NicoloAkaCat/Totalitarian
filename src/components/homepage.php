@@ -10,6 +10,7 @@
             <h1 class="title__name text-large">TOTALITARIAN</h1>
             <h2 class="title__slogan text-medium">Your World, Your Rules</h2>
         </div>
+        <a href="/Totalitarian/src/shop/shop.php" class="title__btn btn text-medium">Visit the Shop</a>
     </section>
 
     <hr class="divider">
