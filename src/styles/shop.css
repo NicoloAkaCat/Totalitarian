@@ -89,3 +89,27 @@
         flex-basis: 30%;
   }
 }
+@media (prefers-reduced-motion: no-preference) {
+  .products__item {
+    -webkit-animation: fade-in linear;
+            animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+  @-webkit-keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

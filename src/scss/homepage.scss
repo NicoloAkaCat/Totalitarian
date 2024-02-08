@@ -1,6 +1,10 @@
 @use 'variables' as var;
 @use 'mixins' as mix;
 
+html{
+    scroll-behavior: smooth !important;
+}
+
 header{
     position: fixed;
     z-index: 9999;

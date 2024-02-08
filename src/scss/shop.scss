@@ -71,3 +71,17 @@
         }
     }
 }
+
+@media (prefers-reduced-motion: no-preference){
+    .products{
+        &__item{
+            animation: fade-in linear;
+            animation-timeline: view();
+            animation-range: entry;
+        }
+        @keyframes fade-in{
+            from{ opacity: 0; }
+            to{ opacity: 1; }
+        }
+    }
+}
