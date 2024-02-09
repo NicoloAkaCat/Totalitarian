@@ -25,7 +25,10 @@
 <body>
     <?php
         include(VarUtils::getDocumentRoot()."components/header.php");
-        include(VarUtils::getDocumentRoot()."components/homepage.php");
+        if(VarUtils::checkIsSetInArray($_SESSION, "UID"))
+            include(VarUtils::getDocumentRoot()."components/homepage_logged.php");
+        else
+            include(VarUtils::getDocumentRoot()."components/homepage.html");
     ?>
     <script src="/Totalitarian/src/scripts/main.js"></script>
     <script src="/Totalitarian/src/scripts/homepage.js"></script>
