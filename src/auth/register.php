@@ -25,22 +25,22 @@
 			ErrorHandler::displayError("Internal Error: variables not set", 500);
 
 		if(VarUtils::checkIsEmptyInArray($_POST, "firstname", "lastname", "email", "pass", "confirm")){
-			echo '<div class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
 			throw new Exception();
 		}
 
 		if(!VarUtils::checkValidEmail($_POST["email"])){
-			echo '<div class="notification notification--failure no-animate text-small">Invalid email</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Invalid email</div>';
 			throw new Exception();
 		}
 			
 		if(!User::checkPassEqualsConfirm($_POST["pass"], $_POST["confirm"])){
-			echo '<div class="notification notification--failure no-animate text-small">Passwords don\'t match</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Passwords don\'t match</div>';
 			throw new Exception();
 		}
 
 		if(!VarUtils::checkValidPassword($_POST["pass"])){
-			echo '<div class="notification notification--failure no-animate text-small">Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character</div>';
 			throw new Exception();
 		}
 
@@ -57,7 +57,7 @@
 		$db->execute($query);
 
 		if($query->affected_rows <= 0){
-			echo '<div class="notification notification--failure no-animate text-small">Cannot register user or user already registered</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Cannot register user or user already registered</div>';
 			throw new Exception();
 		}
 		$query->close();

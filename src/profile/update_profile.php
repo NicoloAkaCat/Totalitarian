@@ -39,12 +39,12 @@
             ErrorHandler::displayError("Internal Error: variables not set", 500);
 
         if(VarUtils::checkIsEmptyInArray($_POST, "firstname", "lastname", "email")){
-            echo '<div class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
+            echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
             throw new Exception();
         }
 
         if(!VarUtils::checkValidEmail($_POST["email"])){
-			echo '<div class="notification notification--failure no-animate text-small">Invalid email</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Invalid email</div>';
 			throw new Exception();
 		}
 

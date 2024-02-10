@@ -24,7 +24,7 @@
             ErrorHandler::displayError("Internal Error: variables not set", 500);
 
         if(VarUtils::checkIsEmptyInArray($_POST, "pass", "newPass", "newPassConfirm")){
-            echo '<div class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
+            echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
             throw new Exception();
         }
 
@@ -33,12 +33,12 @@
         $newPassConfirm = trim($_POST["newPassConfirm"]);
 
         if(!User::checkPassEqualsConfirm($newPass, $newPassConfirm)){
-			echo '<div class="notification notification--failure no-animate text-small">Passwords don\'t match</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Passwords don\'t match</div>';
 			throw new Exception();
 		}
 
         if(!VarUtils::checkValidPassword($newPass)){
-			echo '<div class="notification notification--failure no-animate text-small">Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character</div>';
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character</div>';
 			throw new Exception();
 		}
 
@@ -57,7 +57,7 @@
             ErrorHandler::displayError("Internal Error", 500);
         $user = User::withRow($row);
         if(!$user->verifyPassword($pass)){
-            echo '<div class="notification notification--failure no-animate text-small">Old password is wrong!</div>';
+            echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Old password is wrong!</div>';
             throw new Exception();
         }
 

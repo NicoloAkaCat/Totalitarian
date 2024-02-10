@@ -24,7 +24,7 @@
             ErrorHandler::displayError("Internal Error: variables not set", 500);
 
         if(VarUtils::checkIsEmptyInArray($_POST, "email", "pass")){
-            echo '<div class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
+            echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Check input data, some are missing</div>';
             throw new Exception();
         }
 
@@ -46,7 +46,7 @@
         $db->close();
 
         if($result->num_rows != 1){
-            echo '<div class="notification notification--failure no-animate text-small">User not found</div>';
+            echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">User not found</div>';
             throw new Exception();
         }
 
@@ -55,7 +55,7 @@
 
         $user = User::withRow($row);
         if(!$user->verifyPassword($inputPass)){
-            echo '<div class="notification notification--failure no-animate text-small">Wrong email or password</div>';
+            echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Wrong email or password</div>';
             throw new Exception();
         }
 
