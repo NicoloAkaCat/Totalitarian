@@ -17,6 +17,9 @@
 
         <nav class="nav">
             <ul class="nav__list">
+                <li aria-hidden="true" class="nav__list__item">
+                    <button class="nav__list__item__link text-small dux">DVX</button>
+                </li>
                 <li class="nav__list__item">
                     <a href="/Totalitarian/src/shop/shop.php" class="nav__list__item__link text-small"><i class="fa-solid fa-bag-shopping"></i><span>Shop</span></a>
                 </li>

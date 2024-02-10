@@ -184,6 +184,9 @@ header {
   background-color: #3a3a3a;
   border-bottom: 2px solid #431708;
 }
+header .dux {
+  font-family: "Times New Roman", serif;
+}
 header .logo {
   padding: 1rem 0;
   -webkit-box-pack: justify;
@@ -304,10 +307,7 @@ header .nav__list__item:not(:first-child) {
   margin: 1rem auto;
 }
 
-/*** 
-    small
-***/
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 750px) {
   header .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -394,9 +394,3 @@ header .nav__list__item:not(:first-child) {
     }
   }
 }
-/*** 
-    medium 
-***/
-/*** 
-    large
-***/
