@@ -54,6 +54,11 @@ img{
     font-size: func.fluid_typography(14, 18, 576, 992);
 }
 
+.sr-only{
+    position: absolute;
+    display: hidden;
+}
+
 .btn{
     margin: 2rem;
     @include mix.button;

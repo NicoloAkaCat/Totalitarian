@@ -1,4 +1,4 @@
-import { removeFormError, showFormError, emailRegex } from './formUtils.js';
+import { removeFormError, showFormError, emailRegex, showAriaError } from './formUtils.js';
 
 const email = document.querySelector('#email');
 const pass = document.querySelector('#pass');
@@ -28,6 +28,8 @@ button.addEventListener('click', (event) => {
     else
         removeFormError(pass, 'Field required');
 
-    if(err)
+    if(err){
         event.preventDefault();
+        showAriaError();
+    }
 })

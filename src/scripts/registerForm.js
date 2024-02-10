@@ -1,4 +1,4 @@
-import { showFormError, removeFormError, emailRegex, passwordRegex, checkEmailAlreadyInUse } from './formUtils.js';
+import { showFormError, removeFormError, emailRegex, passwordRegex, checkEmailAlreadyInUse, showAriaError } from './formUtils.js';
 
 const firstName = document.querySelector('#firstname');
 const lastName = document.querySelector('#lastname');
@@ -61,6 +61,8 @@ button.addEventListener('click', (event) => {
     else
         removeFormError(pass, 'Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character');
 
-    if(err || emailError)
+    if(err || emailError){
         event.preventDefault();
+        showAriaError();
+    }
 })

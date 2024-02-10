@@ -1,4 +1,4 @@
-import { showFormError, removeFormError, passwordRegex } from './formUtils.js';
+import { showFormError, removeFormError, passwordRegex, showAriaError } from './formUtils.js';
 
 const pass = document.querySelector('#pass');
 const newPass = document.querySelector('#newPass');
@@ -36,6 +36,8 @@ button.addEventListener('click', (event) => {
     else
         removeFormError(newPass, 'Password must contain at least 8 characters, one uppercase, one lowercase, one number and one special character');
 
-    if(err)
+    if(err){
         event.preventDefault();
+        showAriaError();
+    }
 })

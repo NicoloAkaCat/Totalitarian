@@ -1,4 +1,4 @@
-import { showFormError, removeFormError, emailRegex, checkEmailAlreadyInUse } from './formUtils.js';
+import { showFormError, removeFormError, emailRegex, checkEmailAlreadyInUse, showAriaError } from './formUtils.js';
 
 const firstName = document.querySelector('#firstname');
 const lastName = document.querySelector('#lastname');
@@ -42,6 +42,8 @@ button.addEventListener('click', (event) => {
             removeFormError(field, 'Field required');
     });
 
-    if(err || emailError)
+    if(err || emailError){
         event.preventDefault();
+        showAriaError();
+    }
 })
