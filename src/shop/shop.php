@@ -54,13 +54,21 @@
                 $query->close();
                 $db->close();
 
-                while($product = Product::withRow($result->fetch_assoc())){
-                    echo '<article class="products__item column flex-center">
-                            <img class="products__item__img" src="'.$product->getImage().'" alt="'.$product->getImageAlt().'">
-                            <h2 class="products__item__name text-medium">'.$product->getName().'</h2>
-                            <span class="products__item__price text-medium">'.$product->getPrice().' $</span>
-                            <a href="/Totalitarian/src/shop/view_product.php?id='.$product->getId().'" class="products__item__btn btn text-small">View product</a>
-                        </article>';
+                if($result->num_rows == 0){
+                    echo '<div class="products__empty column flex-center">
+                            <img src="/Totalitarian/src/assets/logo_icon_white.svg" alt="Totalitarian logo" class="products__empty__img">
+                            <h2 class="products__empty__msg text-medium">No products found</h2>
+                            <a href="./shop.php?search=" class="products__empty__btn btn text-small">List All Products</a>
+                        </div>';
+                } else{
+                    while($product = Product::withRow($result->fetch_assoc())){
+                        echo '<article class="products__item column flex-center">
+                                <img class="products__item__img" src="'.$product->getImage().'" alt="'.$product->getImageAlt().'">
+                                <h2 class="products__item__name text-medium">'.$product->getName().'</h2>
+                                <span class="products__item__price text-medium">'.$product->getPrice().' $</span>
+                                <a href="/Totalitarian/src/shop/view_product.php?id='.$product->getId().'" class="products__item__btn btn text-small">View product</a>
+                            </article>';
+                    }
                 }
                 ?>
             </section>

@@ -71,6 +71,17 @@
 .products__item__btn {
   margin: 0;
 }
+.products__empty {
+  text-align: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.products__empty__img {
+  width: 30%;
+}
+.products__empty__btn {
+  margin: 0;
+}
 
 @media screen and (min-width: 750px) {
   .products {
@@ -87,6 +98,9 @@
   .products__item {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
+  }
+  .products__empty__img {
+    width: 70%;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
