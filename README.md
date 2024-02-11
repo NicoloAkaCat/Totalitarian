@@ -16,6 +16,8 @@ Here are some more specific resources I found useful:
 
 ### General
 - [FontAwesome](https://fontawesome.com) for the icons.
+- [Unsplash](https://unsplash.com) and [Pexels](https://www.pexels.com) for free stock images.
+- [Photopea](https://www.photopea.com) to edit images free online.
 
 ### CSS
 - A lot of [Kevin Powell](https://www.youtube.com/@KevinPowell) videos, including his [Conquering Responsive Layouts](https://courses.kevinpowell.co/conquering-responsive-layouts) course.
