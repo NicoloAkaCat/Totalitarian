@@ -1,0 +1,11 @@
+RedirectMatch 404 /Totalitarian/src/.htaccess
+RedirectMatch 404 /Totalitarian/src/session.php
+RedirectMatch 404 /Totalitarian/src/variable_utils.php
+RedirectMatch 404 /Totalitarian/src/scss/
+RedirectMatch 404 /Totalitarian/src/error/error_handler.php
+RedirectMatch 404 /Totalitarian/src/database/
+RedirectMatch 404 /Totalitarian/src/components/
+RedirectMatch 404 /Totalitarian/src/auth/login_form.php
+RedirectMatch 404 /Totalitarian/src/auth/register_form.php
+
+ErrorDocument 404 /Totalitarian/src/error/404.php
