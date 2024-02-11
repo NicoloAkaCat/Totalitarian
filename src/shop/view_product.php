@@ -76,7 +76,7 @@
                     <p class="product__info__stock text-small">In Stock: <?php echo $product->getQuantity();?></p>
                     <div class="product__info__buy">
                         <div class="product__info__buy__price text-medium"><?php echo $product->getPrice();?> $</div>
-                        <a href="./view_product.php?js=false" class="product__info__buy__btn btn text-medium" role="button">Add to Cart</a>
+                        <a href="./view_product.php?js=false" class="product__info__buy__btn btn text-medium" role="button"><?php echo $product->getQuantity() > 0 ? "Add to Cart" : "Out of Stock"?></a>
                     </div>
                 </section>
             </article>

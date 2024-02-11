@@ -18,6 +18,10 @@ const toAdd = {
 
 btn.addEventListener('click', (e) => {
     e.preventDefault();
+    if(btn.textContent === 'Out of Stock'){
+        showNotification('#main-container', 'Item out of stock', false);
+        return;
+    }
     let cart = localStorage.getItem('cart');
     if(cart === null)
         cart = [toAdd];
