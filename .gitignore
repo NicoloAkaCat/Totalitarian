@@ -3,4 +3,6 @@ errors.log
 server_credentials
 .DS_Store
 */.DS_Store
+src/.DS_Store
+src/assets/.DS_Store
 test/
