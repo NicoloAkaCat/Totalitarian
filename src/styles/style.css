@@ -307,6 +307,19 @@ header .nav__list__item:not(:first-child) {
   margin: 1rem auto;
 }
 
+.footer {
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 2px solid #431708;
+  background-color: #3a3a3a;
+}
+.footer__text {
+  margin-block: 0.1rem;
+}
+.footer__link, .footer__link:visited {
+  color: #FAF8FF;
+}
+
 @media screen and (min-width: 750px) {
   header .container {
     display: -webkit-box;

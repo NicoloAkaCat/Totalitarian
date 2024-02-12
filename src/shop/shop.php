@@ -74,6 +74,9 @@
             </section>
         </div>
     </main>
+    <?php
+        include(VarUtils::getDocumentRoot()."components/footer.html");
+    ?>
     <script src="/Totalitarian/src/scripts/main.js"></script>
 </body>
 </html>

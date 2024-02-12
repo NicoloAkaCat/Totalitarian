@@ -15,7 +15,6 @@
 
         public static function init(){
             error_reporting(E_ALL);
-            ini_set("display_errors", "On");
             set_error_handler(array("ErrorHandler", "errorHandler"));
             set_exception_handler(array("ErrorHandler", "exceptionHandler"));
         }

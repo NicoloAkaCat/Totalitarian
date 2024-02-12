@@ -29,6 +29,7 @@
             include(VarUtils::getDocumentRoot()."components/homepage_logged.php");
         else
             include(VarUtils::getDocumentRoot()."components/homepage.html");
+        include(VarUtils::getDocumentRoot()."components/footer.html");
     ?>
     <script src="/Totalitarian/src/scripts/main.js"></script>
     <script src="/Totalitarian/src/scripts/homepage.js"></script>
