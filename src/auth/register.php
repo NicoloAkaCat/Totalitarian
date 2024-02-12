@@ -29,7 +29,7 @@
 			throw new Exception();
 		}
 
-		if(!VarUtils::checkValidEmail($_POST["email"])){
+		if(!VarUtils::checkValidEmail(trim($_POST["email"]))){
 			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Invalid email</div>';
 			throw new Exception();
 		}

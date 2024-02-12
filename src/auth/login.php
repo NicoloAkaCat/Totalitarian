@@ -31,16 +31,16 @@
         $inputEmail = trim($_POST["email"]); 
         $inputPass = trim($_POST["pass"]);
 
+        if(!VarUtils::checkValidEmail($inputEmail)){
+			echo '<div aria-live="assertive" class="notification notification--failure no-animate text-small">Invalid email</div>';
+			throw new Exception();
+		}
+
         $db = new Database();
-
         $db->connect();
-
         $query = $db->prepare("SELECT * FROM users WHERE email = ?");
-
         $db->bindParam($query, "s", $inputEmail);
-        
         $db->execute($query);
-
         $result = $db->getResult($query);
         $query->close();
         $db->close();

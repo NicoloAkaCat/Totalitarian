@@ -9,7 +9,7 @@
         private $db_schema;
 
         private function getCredentials(): void{
-            if(!$fd = fopen("/Applications/XAMPP/xamppfiles/htdocs/Totalitarian/server_credentials", "r"))
+            if(!$fd = fopen(VarUtils::getDocumentRoot()."../server_credentials", "r"))
                 ErrorHandler::displayError("", 500);
             flock($fd, LOCK_SH);
             $line = fgets($fd);

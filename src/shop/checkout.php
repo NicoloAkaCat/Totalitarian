@@ -18,10 +18,10 @@
     if($data == null)
         ErrorHandler::displayJsonError("Internal Error", 500);
     function fail($db, ...$queries){
-        $db->rollback();
-        $db->close();
         foreach($queries as $query)
             $query->close();
+        $db->rollback();
+        $db->close();
     }
     
     $db = new Database();

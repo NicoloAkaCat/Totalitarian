@@ -4,13 +4,13 @@
     class ErrorHandler{
         public static function errorHandler(int $errno, string $errstr, ?string $errfile, ?int $errline = NULL): bool{
             $timestamp = date('l jS \of F Y h:i:s A');
-            error_log("$timestamp - Error($errno): $errstr in $errfile on line $errline\n\n", 3, "/Applications/XAMPP/xamppfiles/htdocs/Totalitarian/errors.log");
+            error_log("$timestamp - Error($errno): $errstr in $errfile on line $errline\n\n", 3, VarUtils::getDocumentRoot()."../errors.log");
             return true;
         }
 
         public static function exceptionHandler(Throwable $e): void{
             $timestamp = date('l jS \of F Y h:i:s A');
-            error_log("$timestamp - Uncaught Exception: ".$e->getMessage()."\n\n", 3, "/Applications/XAMPP/xamppfiles/htdocs/Totalitarian/errors.log");
+            error_log("$timestamp - Uncaught Exception: ".$e->getMessage()."\n\n", 3, VarUtils::getDocumentRoot()."../errors.log");
         }
 
         public static function init(){
@@ -23,7 +23,7 @@
             $sqlCode = $ex->getCode();
             $sqlMsg = $ex->getMessage();
             $timestamp = date('l jS \of F Y h:i:s A');
-            error_log("$timestamp - Database->$f($sqlCode): $sqlMsg\n\n", 3, "/Applications/XAMPP/xamppfiles/htdocs/Totalitarian/errors.log");
+            error_log("$timestamp - Database->$f($sqlCode): $sqlMsg\n\n", 3, VarUtils::getDocumentRoot()."../errors.log");
         }
 
         public static function displayError(string $msg, int $code): void{
