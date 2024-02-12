@@ -1,4 +1,4 @@
-<?
+<?php
     require_once(__DIR__."/../variable_utils.php");
     require_once(VarUtils::getDocumentRoot()."session.php");
     
