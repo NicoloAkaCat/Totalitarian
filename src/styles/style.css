@@ -111,6 +111,7 @@ img {
   left: auto;
   right: auto;
   width: 50%;
+  z-index: 9999;
   max-width: 500px;
   padding: 1rem;
   text-align: center;
