@@ -9,6 +9,10 @@ This project is based on ***heavy* satire** and it's not by any mean a real mark
 
 I'm not a security expert, so I advise to not put sensible information and data on the website.
 
+<video width="1280" height="720" controls>
+  <source src="./tour.mov" type="video/mp4">
+</video>
+
 ## Tech Stack
 This project is built using HTML, SASS, JS, PHP. 
 
